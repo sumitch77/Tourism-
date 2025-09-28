@@ -38,6 +38,51 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14694.96396464613!2d85.309562!3d23.344101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398b2386df480857%3A0x62c5b809eee29004!2sJharkhand!5e0!3m2!1sen!2sin!4v1695912345678!5m2!1sen!2sin"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <div class="live-location-section"
+            style="background:#b5e7c0; border-radius:14px; box-shadow:0 2px 8px rgba(78,148,79,0.08); padding:20px 16px; margin:32px auto; max-width:500px; text-align:center;">
+            <h2 style="color:#256029; font-size:1.15rem; margin-bottom:10px;">Share Your Live Location</h2>
+            <p style="color:#256029; font-size:1rem; margin-bottom:16px;">Want to let friends or family know where you
+                are? Use Google Maps to share your live location securely:</p>
+            <ol style="text-align:left; color:#256029; font-size:1rem; margin:0 auto 16px auto; max-width:400px;">
+                <li>Open <strong>Google Maps</strong> on your phone.</li>
+                <li>Tap your profile picture &gt; <strong>Location sharing</strong>.</li>
+                <li>Tap <strong>Share location</strong> and choose how long to share.</li>
+                <li>Select people to share with or copy the link to send.</li>
+            </ol>
+            <a href="https://support.google.com/maps/answer/7326816?hl=en" target="_blank"
+                style="display:inline-block; background:#4e944f; color:#fff; padding:10px 22px; border-radius:8px; text-decoration:none; font-weight:600; margin-top:8px;">Learn
+                More</a>
+            <div id="geo-location" style="margin-top:24px;">
+                <button onclick="getLocation()"
+                    style="background:#4e944f; color:#fff; padding:8px 18px; border:none; border-radius:8px; font-weight:600; cursor:pointer;">Show
+                    My Live Location</button>
+                <div id="location-result" style="margin-top:12px; color:#256029; font-size:1rem;"></div>
+                <div id="gps-status" style="margin-top:8px; color:#256029; font-size:0.98rem;"></div>
+            </div>
+            <script>
+                function getLocation() {
+                    var result = document.getElementById('location-result');
+                    var gpsStatus = document.getElementById('gps-status');
+                    if (navigator.geolocation) {
+                        gpsStatus.textContent = 'GPS is enabled.';
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            var lat = position.coords.latitude;
+                            var lon = position.coords.longitude;
+                            var mapLink = 'https://www.google.com/maps?q=' + lat + ',' + lon;
+                            result.innerHTML = 'Your coordinates: <b>' + lat.toFixed(5) + ', ' + lon.toFixed(5) + '</b><br>' +
+                                '<a href="' + mapLink + '" target="_blank" style="color:#4e944f; text-decoration:underline; font-weight:600;">View on Google Maps</a>';
+                        }, function (error) {
+                            result.textContent = 'Unable to retrieve your location.';
+                            gpsStatus.textContent = 'GPS is disabled or unavailable.';
+                        });
+                    } else {
+                        result.textContent = 'Geolocation is not supported by your browser.';
+                        gpsStatus.textContent = 'GPS is not supported.';
+                    }
+                }
+            </script>
+        </div>
+    </div>
     </div>
 </body>
 
