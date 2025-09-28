@@ -51,19 +51,23 @@
     <form id="newform" class="itinerary-form" autocomplete="off">
       <label> Enter Your Name 
       
-      <input type="text" name="Name" placeholder="e.g Rahul"> </label>
+      <input type="text" name="Name" placeholder="e.g Rahul" required > </label>
         <label>
           Enter Email
-          <input type="email" name="Email" placeholder="e.g example@gmail.com">
+          <input type="email" name="Email" placeholder="e.g example@gmail.com" required >
+        </label>
+      <label>
+          Enter Phone Number
+          <input type="number" name="Phone Number" placeholder="e.g 47367875XX" required >
         </label>
       
       <label>
         Trip Duration (days):
-        <input type="number" name="Duration" min="1" max="300" placeholder="e.g. 5">
+        <input type="number" name="Duration" min="1" max="300" placeholder="e.g. 5" required >
       </label>
       <label>
         Interests:
-        <select name="Favourite Place">
+        <select name="Favourite Place" required>
           <option>Nature</option>
           <option>Cultural</option>
           <option>Adventure</option>
@@ -73,14 +77,17 @@
       </label>
       <label>
         Budget (INR):
-        <input type="number" name="Budget" min="1000" step="500" placeholder="e.g. 10000">
+        <input type="number" name="Budget" min="1000" step="500" placeholder="e.g. 10000 (optional)">
       </label>
-      <button type="submit" class="btn primary">Generate Itinerary</button>
+      <button type="submit" id="oldbook" class="btn primary">Generate Itinerary</button>
+       <a href="#book" class="btn primary"> Best Hotels</a>
     </form>
     <div id="output" class="itinerary-result">
+    
+   
      
-      
     </div>
+    
     
   </section>
 <!-- ...existing code... -->
@@ -173,7 +180,7 @@
           <button class="btn small">Buy Now</button>
         </div>
       </div>
-      <div class="market-card">
+      <div id="book" class="market-card">
         <img src="https://images.unsplash.com/photo-1746549854902-332ec790ac7c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbSUyMGpoYXJraGFuZHxlbnwwfHwwfHx8MA%3D%3D" alt="Homestay">
         <div class="market-info">
           <h3>Homestays</h3>
@@ -202,9 +209,10 @@
   <section id="community" class="section community">
     <h2>Community & Culture</h2>
     <div class="community-grid">
-      <div class="community-card">
+    
+      <div  class="community-card">
         <h3>Tribal Festivals</h3>
-        <p>Experience Sarhul, Karma, Sohrai, and more vibrant celebrations.</p>
+        <p> <a href="page1.html" target="_blank">Experience Sarhul, Karma, Sohrai, and more vibrant celebrations.</a></p>
       </div>
       <div class="community-card">
         <h3>Local Artisans</h3>
@@ -233,8 +241,8 @@
         <p>AI Sentiment: <span class="positive">95% Positive</span></p>
       </div>
     </div>
-    <form id="form">
-      <input name="feedback" type="feedback" id="k3" placeholder="Give Feedback" aria-expanded="true">
+    <form id="form" class="itinerary-form">
+      <input name="feedback" type="feedback" placeholder="Give Feedback">
       <button type="submit" class="btn primary">Submit</button>
     </form>
   </section>
@@ -274,11 +282,101 @@
     </div>
     
   </footer>
+  <script>
+  
+  // Hero image slider
+  const images = document.querySelectorAll('.hero-slider img');
+  let current = 0;
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 3500);
+
+  // Leaflet Map for Jharkhand
+  document.addEventListener("DOMContentLoaded", function() {
+    var map = L.map('jh-map').setView([23.6102, 85.2799], 7); // Centered on Ranchi, Jharkhand
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Example marker: Ranchi Railway Station
+    L.marker([23.3722, 85.3250]).addTo(map)
+      .bindPopup('Ranchi Railway Station').openPopup();
+  });
+</script>
+  <script>
+  <!-- ...existing code... -->
+   src="https://unpkg.com/leaflet/dist/leaflet.js"
+<!-- ...existing code... -->
+
 
   <!-- Simple JS for Hero Slider (optional) -->
   
+  </script>
+  <script>
+  const form = document.getElementById("newform");
+const output = document.getElementById("output"); // make sure you add <div id="output"></div> in HTML
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Collect all input values dynamically
+  const data = {};
+  const elements = form.elements;
+
+  for (let i = 0; i < elements.length; i++) {
+    const el = elements[i];
+    if (!el.name) continue;
+
+    // Checkboxes: collect all checked values
+    if (el.type === "checkbox") {
+      if (!data[el.name]) data[el.name] = [];
+      if (el.checked) data[el.name].push(el.value);
+    } 
+    // Radio buttons: take only the selected one
+    else if (el.type === "radio") {
+      if (el.checked) data[el.name] = el.value;
+    } 
+    // Other inputs
+    else {
+      data[el.name] = el.value;
+    }
+  }
+
+  // Convert checkbox arrays to comma-separated strings
+  for (let key in data) {
+    if (Array.isArray(data[key])) {
+      data[key] = data[key].join(", ");
+    }
+  }
+
+  // --- PRINT DATA ON PAGE ---
+  let line = "";
+  for (let key in data) {
+    line += `<strong>${key}:</strong> ${data[key]}<br>`;
+  }
+  output.innerHTML += line + "<hr>"; // add horizontal line for separation
+
+  // --- Send data to your Google Sheets Web App ---
+  fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
+    method: "POST",
+    mode: "no-cors",   // no-cors mode avoids preflight
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.text())
+  .then(response => {
+    alert("submitted");
+    form.reset();
+  })
+  .catch(err => console.error(err));
+});
   
-  <script src="done.js"></script>
+  
+  
+  </script>
+ 
 </body>
   
 </html>
