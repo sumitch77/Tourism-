@@ -33,8 +33,8 @@ b.addEventListener("click",() =>{
   
   
   const form = document.getElementById("newform");
-const output = document.getElementById("output"); // make sure you add <div id="output"></div> in HTML
-let itineraryBox = document.querySelector("#planning");
+let output = document.getElementById("output"); // make sure you add <div id="output"></div> in HTML
+let planning = document.querySelector("#planning");
 
 
 form.addEventListener("submit", function(e) {
@@ -42,18 +42,17 @@ form.addEventListener("submit", function(e) {
 
   
   let budget = parseInt(document.querySelector("#budget").value); 
-let msg = "";
+
 
 if (budget <= 40000) {
-  msg = "Ye gareeb ki ....";
+  planning.innerText = "Ye gareeb ki ....";
 } else if (budget <= 100000) {
-  msg = "nice budget";
+  planning.innerText = "nice budget";
 } else if (budget >= 100000) {
-  msg = "Ameer ka C...";
+  planning.innerText = "Ameer ka C...";
 
 }
-
-itineraryBox.innerHTML = `${msg}`;
+  
 
 
 
@@ -109,7 +108,12 @@ itineraryBox.innerHTML = `${msg}`;
 });
   
 
-
+let clear = document.querySelector("#clear");
+clear.addEventListener("click" , () =>{
+  planning.innerText="";
+  output.innerText="";
+  
+});
 
 
 

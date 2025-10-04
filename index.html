@@ -61,7 +61,7 @@
         </label>
       <label>
           Enter Phone Number
-          <input type="number" name="Phone Number" placeholder="e.g 47367875XX" required >
+          <input type="text" name="Phone Number" pattern="\d{10}" maxlength="10" placeholder="e.g 47367875XX" required >
         </label>
       
       <label>
@@ -84,6 +84,7 @@
       </label>
       <button type="submit" id="oldbook" class="btn primary">Generate Itinerary</button>
        <a href="#book" class="btn primary"> Best Hotels</a>
+      <button id="clear" class="btn primary" > Clear Itinerary</button>
     </form>
     <div id="output" class="itinerary-result">     
     </div>
