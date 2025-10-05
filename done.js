@@ -40,7 +40,8 @@ b.addEventListener("click",() =>{
 let output = document.getElementById("output"); // make sure you add <div id="output"></div> in HTML
 let planning = document.querySelector("#planning");
 let disp = document.querySelector("#disp");
-
+let feed = document.querySelector("#form");
+let feedbacked = document.querySelector("#feedbacked");
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
@@ -61,8 +62,8 @@ if (budget <= 40000) {
 
 
 
-  const data = {};
-  const elements = form.elements;
+  let data = {};
+  let elements = form.elements;
 
   for (let i = 0; i < elements.length; i++) {
     const el = elements[i];
@@ -116,6 +117,7 @@ if (budget <= 40000) {
   .catch(err => console.error(err));
 });
   
+// for clear itenary form
 
 let clear = document.querySelector("#clear");
 clear.addEventListener("click" , () =>{
@@ -124,10 +126,58 @@ clear.addEventListener("click" , () =>{
   
 });
 
+// for feedback submit
+feed.addEventListener("submit", function(e) {
+  e.preventDefault();
 
+let data = {};
+  let elements = feed.elements;
 
+  for (let i = 0; i < elements.length; i++) {
+    const el = elements[i];
+    if (!el.name) continue;
 
+    
+    if (el.type === "checkbox") {
+      if (!data[el.name]) data[el.name] = [];
+      if (el.checked) data[el.name].push(el.value);
+    } 
+    
+    else if (el.type === "radio") {
+      if (el.checked) data[el.name] = el.value;
+    } 
+    
+    else {
+      data[el.name] = el.value;
+    }
+  }
 
+  
+  for (let key in data) {
+    if (Array.isArray(data[key])) {
+      data[key] = data[key].join(", ");
+    }
+  }
+
+  
+  fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
+    method: "POST",
+    mode: "no-cors",   
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.text())
+  .then(response => {
+      form.reset();
+      feedbacked.style.display="block";
+      setTimeout(() =>{
+          feedbacked.style.display="none";
+      } , 2000);
+    
+  })
+  .catch(err => console.error(err));
+});
+  
 
 
   
