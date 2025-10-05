@@ -4,6 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+#disp{
+  background: red;
+  color: #fff;
+  width: 60vw;
+  height: 30px;
+  font-size: 20px;
+  position: fixed;
+  top: 0px;
+  left: 20vw;
+  text-align: center;
+  display: none;
+  
+  
+}
 body {
   font-family: 'Roboto', Arial, sans-serif;
   background: #f7f5ef;

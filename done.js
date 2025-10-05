@@ -39,6 +39,7 @@ b.addEventListener("click",() =>{
   const form = document.getElementById("newform");
 let output = document.getElementById("output"); // make sure you add <div id="output"></div> in HTML
 let planning = document.querySelector("#planning");
+let disp = document.querySelector("#disp");
 
 
 form.addEventListener("submit", function(e) {
@@ -105,8 +106,12 @@ if (budget <= 40000) {
   })
   .then(res => res.text())
   .then(response => {
-    alert("submitted");
-    form.reset();
+      form.reset();
+      disp.style.display="block";
+      setTimeout(() =>{
+          disp.style.display="none";
+      } , 2000);
+    
   })
   .catch(err => console.error(err));
 });
