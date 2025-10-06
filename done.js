@@ -204,11 +204,12 @@ let data = {};
   })
   .then(res => res.text())
   .then(response => {
-      form.reset();
+      feed.reset();
       feedbacked.style.display="block";
       setTimeout(() =>{
           feedbacked.style.display="none";
       } , 2000);
+      
     
   })
   .catch(err => console.error(err));
