@@ -132,7 +132,6 @@ if (budget <= 40000) {
     
     setTimeout(() =>{
         tmps.style.display="none";
-          tmps.innerText="";
       } , 3000);
     
     output.innerHTML += line + "<hr>"; // add horizontal line for separation
