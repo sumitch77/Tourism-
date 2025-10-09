@@ -1,4 +1,4 @@
-/* Reset & Base */
+
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +40,7 @@
   height: 30px;
   font-size: 20px;
   position: fixed;
-  top: 0px;
+  top: 2px;
   left: 20vw;
   text-align: center;
   display: none;
@@ -55,7 +55,7 @@
   height: 30px;
   font-size: 20px;
   position: fixed;
-  top: 0px;
+  top: 2px;
   left: 20vw;
   text-align: center;
   display: none;

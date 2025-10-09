@@ -147,7 +147,7 @@ if (budget <= 40000) {
       disp.style.display="block";
       setTimeout(() =>{
           disp.style.display="none";
-      } , 5000);
+      } , 3000);
     
   })
   .catch(err => console.error(err));
