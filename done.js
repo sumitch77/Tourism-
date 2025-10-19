@@ -221,7 +221,7 @@ let data = {};
 let heading = document.querySelector("#h1");
 let user= localStorage.getItem("username");
 let pass = localStorage.getItem("password");
-if(user==="Sumit" && pass="6969" ){
+if(user==="Sumit" && pass==="6969" ){
     heading.innerText=" welcome Owner";
 }
 
