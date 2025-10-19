@@ -57,7 +57,7 @@ form.addEventListener("submit", function(e) {
 
   
   let budget = parseInt(document.querySelector("#budget").value);
-if (budget <= 40000) {
+if (budget <= 50000) {
   planning.innerText = "Ye gareeb ki ....";
 } else if (budget <= 100000) {
   planning.innerText = "nice budget";
@@ -214,7 +214,16 @@ let data = {};
   })
   .catch(err => console.error(err));
 });
+
+
   
+// for login page
+let heading = document.querySelector("#h1");
+let user= localStorage.getItem("username");
+let pass = localStorage.getItem("password");
+if(user==="Sumit" && pass="6969" ){
+    heading.innerText=" welcome Owner";
+}
 
 
   
