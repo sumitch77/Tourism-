@@ -219,13 +219,42 @@ let data = {};
   
 // for login page
 let heading = document.querySelector("#h1");
+let admin = document.querySelector("#admin");
 let user= localStorage.getItem("username");
 let pass = localStorage.getItem("password");
+let css= document.querySelector("#cssoff");
+let css1= document.querySelector("#csson");
+
+css.addEventListener("click",() =>{
+[...document.styleSheets].forEach(s => s.disabled = true);
+    
+});
+css1.addEventListener("click",() =>{
+[...document.styleSheets].forEach(s => s.disabled = false);
+    
+});
 if(user==="Sumit" && pass==="6969" ){
-    heading.innerText=" welcome Owner";
+    heading.innerText="welcome Owner";
+    admin.style.display="block"
 }
+else if(user==="Vinay"){
+    heading.innerText="wecome Bhadwa";
+}
+else{
+    heading.innerText=user;
+}
+let newinput = document.querySelector("#hack");
+let evaluate = document.querySelector("#eval");
+let evalres = document.querySelector("#evalre");
+evaluate.addEventListener("click",() =>{
+    let gh = newinput.value;
+    evalres.innerText = eval(gh);
 
+});
 
-  
+  let chatbot= document.querySelector("#chatbot");
+chatbot.addEventListener("click",()=>{
+    window.location.href="chatbot.html";
+});
   
   

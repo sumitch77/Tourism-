@@ -1,0 +1,112 @@
+*{
+  background-color: #132230;
+}
+
+#head{
+  display: flex;
+  justify-content: center; 
+}
+h1{
+  color:white;
+}
+
+#one,#two,#three,#four,#five,#six,#seven,#eight{
+  height: 70px;
+  color : white;
+  background-color: #060f17;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 33px;
+}
+
+#ans1,#ans2,#ans3,#ans4,#ans5,#ans6,#ans7,#ans8{
+  display: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  color : white;
+  font-size: 30px;
+  background-color: #15324d;
+  
+}
+
+#input{
+  height: 80px;
+  color : white;
+  background-color: #060f17;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 33px;
+}
+#input1{
+  height: 150px;
+  display: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 50px;
+  background: #15324d;
+  color: whitesmoke;
+}
+
+#submit{
+  color:white;
+  font-size: 30px;
+}
+
+#extra{
+color:white;
+width:80%; 
+font-size: 40px;  
+}
+
+
+@media(min-width:300px) and (max-width:450px){
+  
+  
+#input1{
+  display: none;
+  height: 120px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 50px;
+  background: #15324d;
+  color: whitesmoke;
+}
+  
+  #input{
+  height: 50px;
+  font-size: 33px;
+}
+  
+  #extra{
+color:white;
+width:80%; 
+font-size: 20px;  
+}
+  
+#submit{
+  color:white;
+  font-size: 15px;
+}
+  
+ #input, #one,#two,#three,#four,#five,#six,#seven,#eight{
+  height: 50px;
+  color : white;
+  background-color: #060f17;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 20px;
+}
+  
+  #ans1,#ans2,#ans3,#ans4,#ans5,#ans6,#ans7,#ans8{
+  display: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  color : white;
+  font-size: 20px;
+  background-color: #15324d;
+  }
+  
+}

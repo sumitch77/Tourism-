@@ -21,7 +21,7 @@
   <!-- start of site -->
   <header class="hero">
     <nav class="navbar">
-      <div id="h1" class="logo">Jharkhand Tourism</div>
+      <div class="logo">Jharkhand Tourism</div>
       <div id="disp"> Form Submitted</div>
       
       
@@ -40,10 +40,6 @@
         
       </div>
       
-      
-      
-      
-      
          
       <ul>
         <li><a href="#itinerary">Plan Your Trip</a></li>
@@ -53,7 +49,9 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    
     <div class="hero-content">
+      <div id="h1" class="logo"></div>
       <h1>Discover Jharkhand: <span>Culture, Nature &amp; Beyond</span></h1>
       <p>Explore the heart of India with AI-powered planning, immersive previews, and authentic local experiences.</p>
       <div class="hero-buttons">
@@ -110,17 +108,28 @@
        <a href="#book" class="btn primary"> Best Hotels</a>
       <button id="clear" class="btn primary" > Clear Itinerary</button>
     </form>
-    <div id="output" class="itinerary-result">     
-    </div>
+    <div id="output" class="itinerary-result"></div>
+      
     
     
   </div>
+    
     
     <div id="planning"> </div>
   </section>
 
 
- 
+ <div id="admin" class="itinerary-result">Special Admin Fearures 
+      <br>
+      <button id="cssoff" class="btn primary"> Css off</button>
+   <button id="csson" class="btn primary"> Css on</button>
+   <br>
+   <br>
+   <input id="hack" placeholder="Admin Special">
+   <br>
+   <button id="eval" class="btn primary"> Eval </button>
+   <div id="evalre"class="itinerary-result"> </div>
+    </div>
 <section id="destinations" class="section destinations">
   <h2>Top Destinations</h2>
   <div class="destinations-grid">
@@ -275,9 +284,9 @@
   </section>
 
   <!-- Chatbot Assistant -->
-  <div class="chatbot-icon" title="Chat with us!">
+  <div id="chatbot" class="chatbot-icon" title="Chat with us!">
     <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Chatbot" />
-    <span>EN | HI | <span title="Local dialect">🌐</span></span>
+    <span> FAQ <span title="Local dialect">🌐</span></span>
   </div>
 
   <!-- Footer -->
