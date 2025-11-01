@@ -4,6 +4,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+#h1{
+  font-size: 50px;
+}
+#admin{
+  display:none;
+}
+#hack{
+  font-size: 20px;
+}
 
 #tmps{
   width : 60vw;
