@@ -18,7 +18,7 @@ let ans8 = document.querySelector("#ans8");
 
 
 one.addEventListener("click" ,()=>{
-    if(ans1.style.display==="none"){
+    if(ans1.style.display==="none" || ans1.style.display===""){
         ans1.style.display="block";
     }
     else {
@@ -27,7 +27,7 @@ one.addEventListener("click" ,()=>{
 });
 
 two.addEventListener("click" ,()=>{
-    if(ans2.style.display==="none"){
+    if(ans2.style.display==="none" || ans2.style.display===""){
         ans2.style.display="block";
     }
     else {
@@ -36,7 +36,7 @@ two.addEventListener("click" ,()=>{
 });
 
 three.addEventListener("click" ,()=>{
-    if(ans3.style.display==="none"){
+    if(ans3.style.display==="none" || ans3.style.display===""){
         ans3.style.display="block";
     }
     else {
@@ -45,7 +45,7 @@ three.addEventListener("click" ,()=>{
 });
 
 four.addEventListener("click" ,()=>{
-    if(ans4.style.display==="none"){
+    if(ans4.style.display==="none" || ans4.style.display===""){
         ans4.style.display="block";
     }
     else {
@@ -53,7 +53,7 @@ four.addEventListener("click" ,()=>{
     }
 });
 five.addEventListener("click" ,()=>{
-    if(ans5.style.display==="none"){
+    if(ans5.style.display==="none"|| ans5.style.display===""){
         ans5.style.display="block";
     }
     else {
@@ -63,7 +63,7 @@ five.addEventListener("click" ,()=>{
 
 
 six.addEventListener("click" ,()=>{
-    if(ans6.style.display==="none"){
+    if(ans6.style.display==="none"  || ans6.style.display===""){
         ans6.style.display="block";
     }
     else {
@@ -72,7 +72,7 @@ six.addEventListener("click" ,()=>{
 });
 
 seven.addEventListener("click" ,()=>{
-    if(ans7.style.display==="none"){
+    if(ans7.style.display==="none"  || ans7.style.display===""){
         ans7.style.display="block";
     }
     else {
@@ -81,7 +81,7 @@ seven.addEventListener("click" ,()=>{
 });
 
 eight.addEventListener("click" ,()=>{
-    if(ans8.style.display==="none"){
+    if(ans8.style.display==="none"  || ans8.style.display===""){
         ans8.style.display="block";
     }
     else {
@@ -93,12 +93,36 @@ let input = document.querySelector("#input");
 let input1 = document.querySelector("#input1");
 
 input.addEventListener("click",()=>{
-    if(input1.style.display==="none"){
+    if(input1.style.display==="none"  || input1.style.display===""){
         input1.style.display="block";
     }
     else {
         input1.style.display="none";
     }
 });
+let extra = document.querySelector("#extra");
+let mes = document.querySelector("#mes");
 
+let submit= document.querySelector("#submit");
+
+submit.addEventListener("click",()=>{
+    let data = {question : extra.value};
+fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
+    method: "POST",
+    mode: "no-cors",   
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify(data)
+  })
+.then(res => res.text())
+  .then(response => {
+      extra.value="";
+      mes.style.display="block";
+      setTimeout(() =>{
+          mes.style.display="none";
+      } , 3000);
+    
+  })
+  .catch(err => console.error(err));
+    
+});
 

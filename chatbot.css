@@ -1,6 +1,30 @@
 *{
   background-color: #132230;
 }
+#flex{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+}
+#mes{
+color : white ;
+  background-color: #227b8f;
+  
+  height: 40px;
+  width: 250px;
+  text-align: center;
+  display: none;
+  font-size: 30px;
+  position : fixed;
+  top : 5px;
+  
+}
+
+
+#new{
+  display:none;
+}
 
 #head{
   display: flex;
