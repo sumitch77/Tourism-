@@ -40,14 +40,49 @@ b.addEventListener("click",() =>{
 
   
   
-   src="https://unpkg.com/leaflet/dist/leaflet.js"
+src="https://unpkg.com/leaflet/dist/leaflet.js"
 
 
     // main iternary form
-  
+
+let planning = document.querySelector("#planning");
+let close = document.querySelector("#close");
+let hide = document.querySelectorAll(".iti");
+close.addEventListener("click",()=>{
+    if(planning.style.display==="block" || planning.style.display===""){
+      planning.style.display="none"; 
+      close.innerText="show";
+    }
+    else if(planning.style.display==="none"){
+        planning.style.display="block";
+        close.innerText="Hide";
+    }
+});
+
+
+let c = document.querySelector("#cc");
+let d = document.querySelector("#dd");
+
+let e = document.querySelector("#ee");
+let f = document.querySelector("#ff");
+let g = document.querySelector("#gg");
+
+let c3 = document.querySelector("#c3");
+let d3 = document.querySelector("#d3");
+let e3 = document.querySelector("#e3");
+
+let c4 = document.querySelector("#c4");
+let d4 = document.querySelector("#d4");
+let e4 = document.querySelector("#e4");
+
+let c5 = document.querySelector("#c5");
+let d5 = document.querySelector("#d5");
+let e5 = document.querySelector("#e5");
+
+
   const form = document.getElementById("newform");
 let output = document.getElementById("output"); // make sure you add <div id="output"></div> in HTML
-let planning = document.querySelector("#planning");
+
 let disp = document.querySelector("#disp");
 let feed = document.querySelector("#form");
 let feedbacked = document.querySelector("#feedbacked");
@@ -57,15 +92,51 @@ form.addEventListener("submit", function(e) {
 
   
   let budget = parseInt(document.querySelector("#budget").value);
-if (budget <= 50000) {
-  planning.innerText = "Ye gareeb ki ....";
-} else if (budget <= 100000) {
-  planning.innerText = "nice budget";
-} else if (budget >= 100000) {
-  planning.innerText = "Ameer ka C...";
-
+    let days = document.querySelector("#days");
+    let day = parseInt(days.value);
+if (day<=1 && budget < 20000) {
+    c.style.display="block";
+} else if ( day <=1 && budget >=20001){
+    d.style.display="block";
+} 
+    
+    else if ( day ==2 && budget <= 20000) {
+  e.style.display="block";
+}else if ( day ==2 && 40000 >=budget && budget>20000) {
+  f.style.display="block";
+} else if ( day ==2 && budget > 50000) {
+  g.style.display="block";
 }
-  
+    
+  else if ( day ==3 && budget <20000) {
+  c3.style.display="block";
+} else if ( day ==3 && 50000 >= budget && budget >= 20000) {
+  d3.style.display="block";
+} else if ( day ==3 && budget > 50000) {
+  e3.style.display="block";
+}
+    
+else if ( day ==4 && budget <20000) {
+  planning.innerText = "Sorry Sir , This budget is Too less for 4 days";
+} else if ( day ==4 && 50000 >= budget && budget>= 20000) {
+  c4.style.display="block";
+}else if ( day ==4 && 100000>= budget && budget >50000) {
+  d4.style.display="block";
+} else if ( day ==4 && budget > 100000) {
+  e4.style.display="block";
+}   
+    
+ else if ( day >4 && budget <20000) {
+  planning.innerText = "Sorry Sir this Budget is too less for these amount of Days";
+} else if ( day >4 && 50000 >= budget && budget>= 20000) {
+  c5.style.display="block";
+}else if ( day >4 && 100000>= budget && budget >50000) {
+  d5.style.display="block";
+} else if ( day >4 && budget > 100000) {
+  e5.style.display="block";
+}      
+    
+    
     //form code
 
   let data = {};
@@ -159,6 +230,7 @@ let clear = document.querySelector("#clear");
 clear.addEventListener("click" , () =>{
   planning.innerText="";
   output.innerText="";
+    hide.innerText="";
   
 });
 
@@ -235,7 +307,7 @@ css1.addEventListener("click",() =>{
 });
 if(user==="Sumit" && pass==="6969" ){
     heading.innerText="welcome Owner";
-    admin.style.display="block"
+    admin.style.display="block";
 }
 else if(user==="Vinay"){
     heading.innerText="wecome Bhadwa";
