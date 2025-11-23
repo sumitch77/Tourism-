@@ -94,7 +94,7 @@ form.addEventListener("submit", function(e) {
   let budget = parseInt(document.querySelector("#budget").value);
     let days = document.querySelector("#days");
     let day = parseInt(days.value);
-if (day<=1 && budget < 20000) {
+if (day<=1 && budget <= 20000) {
     c.style.display="block";
 } else if ( day <=1 && budget >=20001){
     d.style.display="block";
@@ -102,13 +102,13 @@ if (day<=1 && budget < 20000) {
     
     else if ( day ==2 && budget <= 20000) {
   e.style.display="block";
-}else if ( day ==2 && 40000 >=budget && budget>20000) {
+}else if ( day ==2 && 50000 >=budget && budget>20000) {
   f.style.display="block";
 } else if ( day ==2 && budget > 50000) {
   g.style.display="block";
 }
     
-  else if ( day ==3 && budget <20000) {
+  else if ( day ==3 && budget <= 20000) {
   c3.style.display="block";
 } else if ( day ==3 && 50000 >= budget && budget >= 20000) {
   d3.style.display="block";
@@ -116,7 +116,7 @@ if (day<=1 && budget < 20000) {
   e3.style.display="block";
 }
     
-else if ( day ==4 && budget <20000) {
+else if ( day ==4 && budget <= 20000) {
   planning.innerText = "Sorry Sir , This budget is Too less for 4 days";
 } else if ( day ==4 && 50000 >= budget && budget>= 20000) {
   c4.style.display="block";
@@ -126,7 +126,7 @@ else if ( day ==4 && budget <20000) {
   e4.style.display="block";
 }   
     
- else if ( day >4 && budget <20000) {
+ else if ( day >4 && budget <= 20000) {
   planning.innerText = "Sorry Sir this Budget is too less for these amount of Days";
 } else if ( day >4 && 50000 >= budget && budget>= 20000) {
   c5.style.display="block";
