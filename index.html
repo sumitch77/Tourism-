@@ -18,7 +18,7 @@
 <body>
   
   
-  <!-- start of site -->
+  
   <header class="hero">
     <nav class="navbar">
       <div class="logo">Jharkhand Tourism</div>
@@ -76,14 +76,20 @@
     <form id="newform" class="itinerary-form" autocomplete="off">
       <label> Enter Your Name 
       
-      <input type="text" name="Name" placeholder="e.g Rahul" required > </label>
-        <label>
+      <input type="text" id="sec" name="Name" placeholder="e.g Rahul" required >  
+      </label>
+      
+        <label id="gmun">
           Enter Email
-          <input type="email" name="Email" placeholder="e.g example@gmail.com" required >
+          <input type="email" id="gma" name="Email" placeholder="e.g example@gmail.com">
         </label>
-      <label>
+      <label id="phun">
           Enter Phone Number
-          <input type="text" name="Phone Number" pattern="\d{10}" maxlength="10" placeholder="e.g 47367875XX" required >
+          <input type="text"  id="pho" name="Phone Number" pattern="\d{10}" maxlength="10" placeholder="e.g 97367875XX">
+        </label>
+       <label id="cit">
+          Enter Your City
+          <input type="text"  id="citt" name="City" placeholder="e.g Delhi">
         </label>
       
       <label>
@@ -102,7 +108,7 @@
       </label>
       <label>
         Budget (INR):
-        <input type="number" id="budget" name="Budget" min="1000" placeholder="e.g. 10000 (optional)">
+        <input type="number" id="budget" name="Budget" min="1000" placeholder="e.g. 10000 " required>
       </label>
       <button type="submit" id="oldbook" class="btn primary">Generate Itinerary</button>
        <a href="#book" class="btn primary"> Best Hotels</a>
@@ -148,7 +154,8 @@ Multi-course dinner to end the day in style.</span>
 <span>🕗 20:00 onward | Return to hotel or airport.</span>      
       </div>
       
-<div class="iti" id="ee">
+
+      <div id="ee" class="iti">
   
   <h2>Day 1</h2>
 🗓 DAY 1 – Waterfalls, Temples & City Viewpoints
@@ -193,7 +200,8 @@ Climb to the top, final city view and peaceful closure to the trip.</span>
 <span>17:30 – 19:00 → Free time at cafe / quick shopping near Firayalal Chowk.</span> 
 
 <span>19:30 → Dinner and depart (train/flight/bus).  </span> 
-      </div>
+      
+    </div>
       
       
 <div class="iti" id="ff">
@@ -333,25 +341,25 @@ Private transfer with concierge service.</span>
 
 🗓 DAY 1 – Ranchi City & Surroundings
 
-05:30 – 06:30 | Tagore Hill
-Start with sunrise view and morning walk.
+<span>05:30 – 06:30 | Tagore Hill
+Start with sunrise view and morning walk.</span>
 
-07:00 – 08:00 | Breakfast at local café (Kaveri / Annapurna)
-Simple South Indian or North Indian breakfast.
+<span>07:00 – 08:00 | Breakfast at local café (Kaveri / Annapurna)
+Simple South Indian or North Indian breakfast.</span>
 
-08:30 – 11:00 | Dassam Falls
-Short drive (40 km), enjoy the falls and relax by the riverbank.
+<span>08:30 – 11:00 | Dassam Falls
+Short drive (40 km), enjoy the falls and relax by the riverbank.</span>
 
-11:30 – 13:00 | Jonha Falls
-Optional second waterfall (less crowded, calm atmosphere).
+<span>11:30 – 13:00 | Jonha Falls
+Optional second waterfall (less crowded, calm atmosphere).</span>
 
-13:30 – 14:30 | Lunch at roadside dhaba or local restaurant
+<span>13:30 – 14:30 | Lunch at roadside dhaba or local restaurant</span>
 
-15:00 – 17:00 | Jagannath Temple (Hilltop)
-Temple visit, panoramic Ranchi city view.
+<span>15:00 – 17:00 | Jagannath Temple (Hilltop)
+Temple visit, panoramic Ranchi city view.</span>
 
-17:30 – 19:00 | Rock Garden & Kanke Dam
-Evening boating and sunset photos.
+<span>17:30 – 19:00 | Rock Garden & Kanke Dam
+Evening boating and sunset photos.</span>
 
 Dinner & Stay: Check into hotel in Ranchi (Capitol Hill / Le Lac / Budget stay).
 
@@ -359,19 +367,19 @@ Dinner & Stay: Check into hotel in Ranchi (Capitol Hill / Le Lac / Budget stay).
 
 🗓 DAY 2 – Patratu Valley Adventure
 
-06:00 – 07:00 | Breakfast & Early Departure to Patratu
-Enjoy sunrise drive on winding mountain roads.
+<span>06:00 – 07:00 | Breakfast & Early Departure to Patratu
+Enjoy sunrise drive on winding mountain roads.</span>
 
-07:30 – 10:30 | Patratu Valley & Dam
-Boat ride, photo stops, lakeside stroll.
+<span>07:30 – 10:30 | Patratu Valley & Dam
+Boat ride, photo stops, lakeside stroll.</span>
 
-11:00 – 12:30 | Local Lunch in Patratu town or packed meal by lake
+<span>11:00 – 12:30 | Local Lunch in Patratu town or packed meal by lake</span>
 
-13:30 – 15:30 | Return to Ranchi via Scenic Route
-Stop at viewpoints or tea stalls.
+<span>13:30 – 15:30 | Return to Ranchi via Scenic Route
+Stop at viewpoints or tea stalls.</span>
 
-16:00 – 18:00 | Nakshatra Van
-Peaceful botanical park walk, great for relaxation.
+<span>16:00 – 18:00 | Nakshatra Van
+Peaceful botanical park walk, great for relaxation.</span>
 
 Dinner & Stay: Ranchi city hotel, evening free for café-hopping or shopping.
 
@@ -379,22 +387,22 @@ Dinner & Stay: Ranchi city hotel, evening free for café-hopping or shopping.
 
 🗓 DAY 3 – Culture & Local Flavor
 
-07:00 – 08:00 | Breakfast at Hotel
+<span>07:00 – 08:00 | Breakfast at Hotel</span>
 
-08:30 – 10:30 | Pahari Mandir
-Spiritual hilltop temple with panoramic view.
+<span>08:30 – 10:30 | Pahari Mandir
+Spiritual hilltop temple with panoramic view.</span>
 
-11:00 – 12:30 | Ranchi Museum / Tribal Museum
-Learn about Jharkhand’s culture, crafts, and history.
+<span>11:00 – 12:30 | Ranchi Museum / Tribal Museum
+Learn about Jharkhand’s culture, crafts, and history.</span>
 
-13:00 – 14:00 | Lunch in city (Anghiti / The Urban Bristo)
+<span>13:00 – 14:00 | Lunch in city (Anghiti / The Urban Bristo)</span>
 
-15:00 – 17:00 | Morabadi Ground / Local Market Walk
-Buy local handicrafts or snacks.
+<span>15:00 – 17:00 | Morabadi Ground / Local Market Walk
+Buy local handicrafts or snacks.</span>
 
-17:30 – 18:30 | Evening tea or ice cream near Kanke Lake
+<span>17:30 – 18:30 | Evening tea or ice cream near Kanke Lake</span>
 
-19:00 | Depart (Airport / Station)
+<span>19:00 | Depart (Airport / Station)</span>
       
       </div>
       
@@ -405,29 +413,29 @@ Buy local handicrafts or snacks.
 
 🗓 DAY 1 – Ranchi Highlights & Waterfalls
 
-05:30 – 06:30 | Tagore Hill
-Watch sunrise over Ranchi, light walk, photography stop.
+<span>05:30 – 06:30 | Tagore Hill
+Watch sunrise over Ranchi, light walk, photography stop.</span>
 
-07:00 – 08:00 | Breakfast at hotel or Café Regal
-Healthy buffet start.
+<span>07:00 – 08:00 | Breakfast at hotel or Café Regal
+Healthy buffet start.</span>
 
-08:30 – 11:00 | Dassam Falls
-Scenic drive (≈40 km); enjoy the mist, short trek to base, photos.
+<span>08:30 – 11:00 | Dassam Falls
+Scenic drive (≈40 km); enjoy the mist, short trek to base, photos.</span>
 
-11:30 – 13:00 | Jonha Falls
-Second major waterfall, calmer setting; optional dip if water safe.
+<span>11:30 – 13:00 | Jonha Falls
+Second major waterfall, calmer setting; optional dip if water safe.</span>
 
-13:30 – 14:30 | Lunch at roadside dhaba / Anghiti restaurant
-Simple Jharkhandi or North-Indian meal.
+<span>13:30 – 14:30 | Lunch at roadside dhaba / Anghiti restaurant
+Simple Jharkhandi or North-Indian meal.</span>
 
-15:00 – 16:30 | Jagannath Temple
-Hilltop temple visit; sweeping view of Ranchi.
+<span>15:00 – 16:30 | Jagannath Temple
+Hilltop temple visit; sweeping view of Ranchi.</span>
 
-17:00 – 18:30 | Rock Garden & Kanke Dam
-Evening boating and snacks near lake.
+<span>17:00 – 18:30 | Rock Garden & Kanke Dam
+Evening boating and snacks near lake.</span>
 
-19:00 – 21:00 | Dinner at Radisson Blu (Skylit rooftop)
-Relaxed dinner with city view.
+<span>19:00 – 21:00 | Dinner at Radisson Blu (Skylit rooftop)
+Relaxed dinner with city view.</span>
 
 Stay: Le Lac Sarovar Portico / Capitol Hill Ranchi (3-4 ★).
 
@@ -435,24 +443,24 @@ Stay: Le Lac Sarovar Portico / Capitol Hill Ranchi (3-4 ★).
 
 🗓 DAY 2 – Patratu Valley Adventure
 
-06:00 – 07:00 | Breakfast at Hotel
+<span>06:00 – 07:00 | Breakfast at Hotel</span>
 
-07:30 – 10:00 | Patratu Valley Scenic Drive
-Winding mountain road, photo halts at curves, light drone shots.
+<span>07:30 – 10:00 | Patratu Valley Scenic Drive
+Winding mountain road, photo halts at curves, light drone shots.</span>
 
-10:30 – 12:00 | Patratu Lake & Dam
-Boat ride or lakeside picnic; chill morning breeze.
+<span>10:30 – 12:00 | Patratu Lake & Dam
+Boat ride or lakeside picnic; chill morning breeze.</span>
 
-12:30 – 14:00 | Lunch at Patratu Lake Café or local eatery
+<span>12:30 – 14:00 | Lunch at Patratu Lake Café or local eatery</span>
 
-15:00 – 16:30 | Return to Ranchi via Forest Route
-Short tea break on the way.
+<span>15:00 – 16:30 | Return to Ranchi via Forest Route
+Short tea break on the way.</span>
 
-17:00 – 18:30 | Nakshatra Van (Botanical Garden)
-Peaceful walk among themed gardens.
+<span>17:00 – 18:30 | Nakshatra Van (Botanical Garden)
+Peaceful walk among themed gardens.</span>
 
-19:00 – 21:00 | Dinner & Free Evening
-Explore city cafés or street market.
+<span>19:00 – 21:00 | Dinner & Free Evening
+Explore city cafés or street market.</span>
 
 Stay: Same hotel in Ranchi.
 
@@ -460,24 +468,24 @@ Stay: Same hotel in Ranchi.
 
 🗓 DAY 3 – Culture, Hills & Relaxation
 
-07:00 – 08:00 | Breakfast
+<span>07:00 – 08:00 | Breakfast</span>
 
-08:30 – 10:00 | Pahari Mandir
-Climb to top; panoramic Ranchi skyline.
+<span>08:30 – 10:00 | Pahari Mandir
+Climb to top; panoramic Ranchi skyline.</span>
 
-10:30 – 12:00 | Jharkhand Tribal Museum
-Insight into state’s art, traditions, and artifacts.
+<span>10:30 – 12:00 | Jharkhand Tribal Museum
+Insight into state’s art, traditions, and artifacts.</span>
 
-12:30 – 13:30 | Lunch at Urban Brio / Kaveri Restaurant
+<span>12:30 – 13:30 | Lunch at Urban Brio / Kaveri Restaurant</span>
 
-14:00 – 16:00 | Morabadi Ground + Local Shopping
-Handicrafts, snacks, or light souvenirs.
+<span>14:00 – 16:00 | Morabadi Ground + Local Shopping
+Handicrafts, snacks, or light souvenirs.</span>
 
-16:30 – 18:00 | Evening at Rock Garden or Kanke Dam (optional revisit)
+<span>16:30 – 18:00 | Evening at Rock Garden or Kanke Dam (optional revisit)</span>
 
-19:00 – 20:30 | Farewell Dinner at Hotel Restaurant
+<span>19:00 – 20:30 | Farewell Dinner at Hotel Restaurant</span>
 
-21:00 | Check-out / Airport or Station Drop
+<span>21:00 | Check-out / Airport or Station Drop</span>
 
       </div> 
       
@@ -488,28 +496,28 @@ Handicrafts, snacks, or light souvenirs.
   
 🗓 DAY 1 – Arrival & Ranchi’s Scenic Icons
 
-07:00 – 08:00 | Arrival at Ranchi Airport / Station
-Chauffeur pickup in Toyota Innova Crysta or Fortuner.
+<span>07:00 – 08:00 | Arrival at Ranchi Airport / Station
+Chauffeur pickup in Toyota Innova Crysta or Fortuner.</span>
 
-08:00 – 09:00 | Check-in & Breakfast – Radisson Blu Ranchi (5★)
-Buffet breakfast and refresh.
+<span>08:00 – 09:00 | Check-in & Breakfast – Radisson Blu Ranchi (5★)
+Buffet breakfast and refresh.</span>
 
-09:30 – 11:00 | Tagore Hill & Pahari Mandir
-Panoramic morning views, short heritage walk.
+<span>09:30 – 11:00 | Tagore Hill & Pahari Mandir
+Panoramic morning views, short heritage walk.</span>
 
-11:30 – 13:30 | Dassam Falls (≈40 km drive)
-Private visit with time for photography & relaxation.
+<span>11:30 – 13:30 | Dassam Falls (≈40 km drive)
+Private visit with time for photography & relaxation.</span>
 
-14:00 – 15:00 | Lunch – Anghiti Restaurant (fine Indian dining)
+<span>14:00 – 15:00 | Lunch – Anghiti Restaurant (fine Indian dining)</span>
 
-15:30 – 17:00 | Jonha Falls (scenic & calm)
-Optional guided nature trail or local tea by the falls.
+<span>15:30 – 17:00 | Jonha Falls (scenic & calm)
+Optional guided nature trail or local tea by the falls.</span>
 
-17:30 – 19:00 | Rock Garden & Kanke Dam
-Sunset boating, music café nearby.
+<span>17:30 – 19:00 | Rock Garden & Kanke Dam
+Sunset boating, music café nearby.</span>
 
-20:00 – 22:00 | Dinner – The Skylit Rooftop, Radisson Blu
-Luxury dinner with skyline view.
+<span>20:00 – 22:00 | Dinner – The Skylit Rooftop, Radisson Blu
+Luxury dinner with skyline view.</span>
 
 Stay: Radisson Blu Ranchi (Executive Room).
 
@@ -517,22 +525,22 @@ Stay: Radisson Blu Ranchi (Executive Room).
 
 🗓 DAY 2 – Patratu Valley & Private Lake Retreat
 
-06:30 – 07:30 | Breakfast & Early Start
+<span>06:30 – 07:30 | Breakfast & Early Start</span>
 
-08:00 – 10:00 | Drive to Patratu Valley
-Guided scenic drive with photo stops at winding curves — Jharkhand’s “Mini Shimla.”
+<span>08:00 – 10:00 | Drive to Patratu Valley
+Guided scenic drive with photo stops at winding curves — Jharkhand’s “Mini Shimla.”</span>
 
-10:00 – 12:30 | Patratu Dam & Lake Boating (Private)
-Exclusive motorboat ride and light refreshments by lake.
+<span>10:00 – 12:30 | Patratu Dam & Lake Boating (Private)
+Exclusive motorboat ride and light refreshments by lake.</span>
 
-13:00 – 14:30 | Lunch at Patratu Lake Resort Café
+<span>13:00 – 14:30 | Lunch at Patratu Lake Resort Café</span>
 
-15:00 – 16:00 | Forest Route Drive Back to Ranchi
+<span>15:00 – 16:00 | Forest Route Drive Back to Ranchi</span>
 
-16:30 – 18:30 | Spa & Relaxation at Hotel
-Premium Ayurvedic massage or wellness therapy.
+<span>16:30 – 18:30 | Spa & Relaxation at Hotel
+Premium Ayurvedic massage or wellness therapy.</span>
 
-19:00 – 21:00 | Dinner – Oriental cuisine at The Great Kabab Factory
+<span>19:00 – 21:00 | Dinner – Oriental cuisine at The Great Kabab Factory</span>
 
 Stay: Radisson Blu Ranchi / Chanakya BNR Hotel (Heritage Suite).
 
@@ -540,24 +548,26 @@ Stay: Radisson Blu Ranchi / Chanakya BNR Hotel (Heritage Suite).
 
 🗓 DAY 3 – Tribal Culture & Leisure
 
-07:00 – 08:00 | Breakfast
+<span>07:00 – 08:00 | Breakfast</span>
 
-08:30 – 10:00 | Jharkhand Tribal Museum (Guided Tour)
-Private guide explaining local heritage, artifacts, and artistry.
+<span>08:30 – 10:00 | Jharkhand Tribal Museum (Guided Tour)
+Private guide explaining local heritage, artifacts, and artistry.</span>
 
-10:30 – 12:00 | Morabadi Ground & Local Artisan Market
-Souvenir shopping – handmade crafts, tribal jewelry, local textiles.
+<span>10:30 – 12:00 | Morabadi Ground & Local Artisan Market
+Souvenir shopping – handmade crafts, tribal jewelry, local textiles.</span>
 
-12:30 – 13:30 | Lunch – Café Regal (Continental Fusion)
+<span>12:30 – 13:30 | Lunch – Café Regal (Continental Fusion)</span>
 
-14:00 – 16:00 | Leisure at Nakshatra Van / Kanke Dam (optional)
-Quiet afternoon walk or light tea break by the lake.
+<span>14:00 – 16:00 | Leisure at Nakshatra Van / Kanke Dam (optional)
+Quiet afternoon walk or light tea break by the lake.</span>
 
-16:30 – 18:30 | Evening Tea & Farewell Dinner at Hotel
+<span>16:30 – 18:30 | Evening Tea & Farewell Dinner at Hotel</span>
 
-19:00 | Check-out & Transfer to Ranchi Airport / Station
- 
+<span>19:00 | Check-out & Transfer to Ranchi Airport / Station</span>
+
       </div>
+
+    
       
       <!-- Day 4 --->      
       
@@ -568,86 +578,86 @@ Quiet afternoon walk or light tea break by the lake.
 
 🗓 DAY 1 – Waterfalls & Ranchi Essentials
 
-Morning
+  <span>Morning
 
 Arrive in Ranchi (train or flight).
 
 Check-in: Le Lac Sarovar Portico / Capitol Hill (3★).
 
-Breakfast & quick refresh.
+Breakfast & quick refresh.</span>
 
 
-10:00 – 11:00 | Tagore Hill
-Peaceful view, light trekking, morning photography.
+<span>10:00 – 11:00 | Tagore Hill
+Peaceful view, light trekking, morning photography.</span>
 
-11:30 – 13:00 | Dassam Falls (40 km drive)
-Powerful multi-stream waterfall, misty views.
+<span>11:30 – 13:00 | Dassam Falls (40 km drive)
+Powerful multi-stream waterfall, misty views.</span>
 
-13:30 – 14:30 | Lunch en route (Anghiti or local dhaba).
+<span>13:30 – 14:30 | Lunch en route (Anghiti or local dhaba).</span>
 
-15:00 – 17:00 | Jonha Falls
-“Gautamdhara” waterfall with temple and small hike.
+<span>15:00 – 17:00 | Jonha Falls
+“Gautamdhara” waterfall with temple and small hike.</span>
 
-17:30 – 19:00 | Rock Garden & Kanke Dam (sunset point).
+<span>17:30 – 19:00 | Rock Garden & Kanke Dam (sunset point).</span>
 
-20:00 | Dinner at Café Regal or Skylit Rooftop.
+<span>20:00 | Dinner at Café Regal or Skylit Rooftop.</span>
 Stay overnight in Ranchi.
 
   <h2>Day 2</h2>
 
 🗓 DAY 2 – Patratu Valley & Lake Drive
 
-07:00 – 08:00 | Breakfast & Start Early.
+<span>07:00 – 08:00 | Breakfast & Start Early.</span>
 
-08:00 – 10:00 | Drive to Patratu Valley.
-Scenic road, perfect for photos and drone shots.
+<span>08:00 – 10:00 | Drive to Patratu Valley.
+Scenic road, perfect for photos and drone shots.</span>
 
-10:00 – 12:00 | Patratu Lake Boating + Walkway.
-Cool breeze, light snacks, nature break.
+<span>10:00 – 12:00 | Patratu Lake Boating + Walkway.
+Cool breeze, light snacks, nature break.</span>
 
-12:30 – 13:30 | Lunch at Patratu Lake Resort.
+<span>12:30 – 13:30 | Lunch at Patratu Lake Resort.</span>
 
-14:00 – 16:00 | Drive Back via Forest Route (short tea stop).
+<span>14:00 – 16:00 | Drive Back via Forest Route (short tea stop).</span>
 
-17:00 – 18:00 | Nakshatra Van (Botanical Garden).
+<span>17:00 – 18:00 | Nakshatra Van (Botanical Garden).</span>
 
-19:00 – 21:00 | Dinner at hotel.
+<span>19:00 – 21:00 | Dinner at hotel.</span>
 Stay overnight in Ranchi.
 
   <h2> Day 3</h2>
 
 🗓 DAY 3 – Netarhat Hill Station Excursion (Overnight Trip)
 
-06:00 – 07:00 | Breakfast, checkout from Ranchi.
+<span>06:00 – 07:00 | Breakfast, checkout from Ranchi.</span>
 
-07:00 – 11:00 | Drive to Netarhat (“Queen of Chotanagpur”).
-Scenic forest drive with photo stops.
+<span>07:00 – 11:00 | Drive to Netarhat (“Queen of Chotanagpur”).
+Scenic forest drive with photo stops.</span>
 
-11:30 – 13:00 | Check-in – Netarhat Tourist Lodge / Van Vihar (Govt Resort).
-13:00 – 14:00 | Lunch at lodge.
+<span>11:30 – 13:00 | Check-in – Netarhat Tourist Lodge / Van Vihar (Govt Resort).</span>
+<span>13:00 – 14:00 | Lunch at lodge.</span>
 
-15:00 – 17:00 | Visit Koel View Point & Magnolia Point (sunset view).
-Beautiful sunset valley view — must-see.
+<span>15:00 – 17:00 | Visit Koel View Point & Magnolia Point (sunset view).
+Beautiful sunset valley view — must-see.</span>
 
-19:00 – 21:00 | Dinner & Campfire at lodge.
+<span>19:00 – 21:00 | Dinner & Campfire at lodge.</span>
 Overnight at Netarhat.
 
   <h2> Day 4</h2>
 
 🗓 DAY 4 – Return via Betla National Park 
 
-06:00 – 08:00 | Sunrise at Netarhat View Point.
+<span>06:00 – 08:00 | Sunrise at Netarhat View Point.</span>
 
-08:00 – 09:00 | Breakfast.
+<span>08:00 – 09:00 | Breakfast.</span>
 
-09:30 – 12:00 | Drive to Betla National Park (Wildlife Safari).
-Short safari through Palamu forest region (optional if open).
+<span>09:30 – 12:00 | Drive to Betla National Park (Wildlife Safari).
+Short safari through Palamu forest region (optional if open).</span>
 
-12:30 – 13:30 | Lunch at Betla / Daltonganj route.
+<span>12:30 – 13:30 | Lunch at Betla / Daltonganj route.</span>
 
-14:00 – 18:00 | Drive back to Ranchi.
+<span>14:00 – 18:00 | Drive back to Ranchi.</span>
 
-18:30 – 19:00 | Dinner / Drop at airport or station.
+<span>18:30 – 19:00 | Dinner / Drop at airport or station.</span>
         
       </div>
       
@@ -658,90 +668,90 @@ Short safari through Palamu forest region (optional if open).
 
 🗓 DAY 1 – Ranchi’s Signature Sights & Fine Dining
 
-Morning (Arrival)
+  <span>Morning (Arrival)
 
 Pickup in Toyota Innova Crysta / Fortuner from Ranchi Airport or Station.
 
 Check-in: Radisson Blu Ranchi (Executive Room).
 
 Buffet breakfast & rest.
+  </span>
 
+<span>10:00 – 11:00 | Tagore Hill & Pahari Mandir
+Private guide for heritage walk & city view.</span>
 
-10:00 – 11:00 | Tagore Hill & Pahari Mandir
-Private guide for heritage walk & city view.
+<span>11:30 – 13:00 | Dassam Falls (≈40 km drive)
+Scenic waterfall, mist zone, photography stop.</span>
 
-11:30 – 13:00 | Dassam Falls (≈40 km drive)
-Scenic waterfall, mist zone, photography stop.
+<span>13:30 – 14:30 | Lunch – Anghiti / Urban Brio</span>
 
-13:30 – 14:30 | Lunch – Anghiti / Urban Brio
+<span>15:00 – 17:00 | Jonha Falls (Gautamdhara)
+Peaceful surroundings and local tea stop.</span>
 
-15:00 – 17:00 | Jonha Falls (Gautamdhara)
-Peaceful surroundings and local tea stop.
+<span>17:30 – 18:30 | Rock Garden & Kanke Dam (Sunset)
+Boating, snack café.</span>
 
-17:30 – 18:30 | Rock Garden & Kanke Dam (Sunset)
-Boating, snack café.
-
-20:00 | Dinner – Skylit Rooftop, Radisson Blu (Fine dining with live music)
+<span>20:00 | Dinner – Skylit Rooftop, Radisson Blu (Fine dining with live music)</span>
 Stay Overnight in Ranchi.
 
   <h2>Day 2</h2>
 
 🗓 DAY 2 – Patratu Valley Luxury Drive + Spa Evening
 
-07:00 – 08:00 | Breakfast at Hotel
+<span>07:00 – 08:00 | Breakfast at Hotel</span>
 
-08:30 – 10:00 | Scenic Drive to Patratu Valley
-Luxury car convoy through winding mountain roads, panoramic stops.
+<span>08:30 – 10:00 | Scenic Drive to Patratu Valley
+Luxury car convoy through winding mountain roads, panoramic stops.</span>
 
-10:30 – 12:30 | Patratu Lake Private Boating + Photoshoot
-Private motorboat & lakeside refreshments arranged.
+<span>10:30 – 12:30 | Patratu Lake Private Boating + Photoshoot
+Private motorboat & lakeside refreshments arranged.</span>
 
-13:00 – 14:00 | Lunch – Patratu Lake Resort Café
+<span>13:00 – 14:00 | Lunch – Patratu Lake Resort Café</span>
 
-14:30 – 16:00 | Forest Route Return with Tea Stop.
+<span>14:30 – 16:00 | Forest Route Return with Tea Stop.</span>
 
-16:30 – 18:00 | Spa & Relaxation Session at Radisson Blu (Wellness package)
+<span>16:30 – 18:00 | Spa & Relaxation Session at Radisson Blu (Wellness package)</span>
 
-19:00 – 21:00 | Dinner – The Great Kabab Factory (hotel fine dining)
+<span>19:00 – 21:00 | Dinner – The Great Kabab Factory (hotel fine dining)</span>
 Stay Overnight in Ranchi.
 
   <h2> Day 3</h2>
 
 🗓 DAY 3 – Netarhat Luxury Hill Retreat (Overnight Stay)
 
-06:00 – 07:00 | Breakfast, Checkout, Depart for Netarhat (156 km)
+<span>06:00 – 07:00 | Breakfast, Checkout, Depart for Netarhat (156 km)</span>
 
-07:00 – 11:30 | Scenic Forest Drive to Netarhat (“Queen of Chotanagpur”)
-Stops for photos and coffee at Ghaghri valley.
+<span>07:00 – 11:30 | Scenic Forest Drive to Netarhat (“Queen of Chotanagpur”)
+Stops for photos and coffee at Ghaghri valley.</span>
 
-12:00 – 13:00 | Check-in – Van Vihar Resort / Netarhat Eco-Luxury Lodge
-Welcome drink & rest.
+<span>12:00 – 13:00 | Check-in – Van Vihar Resort / Netarhat Eco-Luxury Lodge
+Welcome drink & rest.</span>
 
-13:00 – 14:00 | Lunch at resort restaurant.
+<span>13:00 – 14:00 | Lunch at resort restaurant.</span>
 
-15:00 – 17:00 | Magnolia Point & Koel View Point (Sunset Views)
-Premium viewpoint with picnic setup & snacks.
+<span>15:00 – 17:00 | Magnolia Point & Koel View Point (Sunset Views)
+Premium viewpoint with picnic setup & snacks.</span>
 
-19:00 – 21:00 | Candlelight Dinner + Bonfire at Resort Garden.
+<span>19:00 – 21:00 | Candlelight Dinner + Bonfire at Resort Garden.</span>
 Overnight in Netarhat.
 
   <h2> Day 4</h2>
 
 🗓 DAY 4 – Nature Trail + Return via Betla Forest Route
 
-06:30 – 07:00 | Sunrise at Netarhat View Point.
+<span>06:30 – 07:00 | Sunrise at Netarhat View Point.</span>
 
-07:00 – 08:00 | Breakfast.
+<span>07:00 – 08:00 | Breakfast.</span>
 
-08:30 – 11:30 | Short Nature Trail + Waterfall Visit (Upper Ghaghri Falls).
+<span>08:30 – 11:30 | Short Nature Trail + Waterfall Visit (Upper Ghaghri Falls).</span>
 
-12:00 – 14:00 | Drive towards Betla / Lunch en route.
+<span>12:00 – 14:00 | Drive towards Betla / Lunch en route.</span>
 
-14:00 – 18:00 | Return to Ranchi (via scenic route).
+<span>14:00 – 18:00 | Return to Ranchi (via scenic route).</span>
 
-18:30 – 19:30 | Farewell Dinner at Hotel or Café Regal.
+<span>18:30 – 19:30 | Farewell Dinner at Hotel or Café Regal.</span>
 
-20:00 | Drop at Airport / Station.
+<span>20:00 | Drop at Airport / Station.</span>
         
       </div>
  
@@ -752,99 +762,101 @@ Overnight in Netarhat.
 
 🗓 DAY 1 – Ranchi Royal Welcome & Waterfall Wonders
 
-Morning
+  <span>Morning
 
 Arrival at Ranchi Airport – meet your chauffeur (Fortuner / Mercedes GLC).
 
 Check-in: Presidential Suite, Radisson Blu Ranchi (5★)
 
 Welcome drink, fruit basket, and early breakfast at Skylit Rooftop.
+  </span>
 
+<span>10:00 – 11:30 | Tagore Hill & Pahari Mandir (with private guide)
+Aerial view of Ranchi, temple visit, light trek.</span>
 
-10:00 – 11:30 | Tagore Hill & Pahari Mandir (with private guide)
-Aerial view of Ranchi, temple visit, light trek.
+<span>12:00 – 14:00 | Dassam Falls (40 km drive)
+VIP visit arranged with security pass, waterfall photography session.</span>
 
-12:00 – 14:00 | Dassam Falls (40 km drive)
-VIP visit arranged with security pass, waterfall photography session.
+<span>14:00 – 15:00 | Lunch at Anghiti (fine Jharkhand cuisine)</span>
 
-14:00 – 15:00 | Lunch at Anghiti (fine Jharkhand cuisine)
+<span>15:30 – 17:30 | Jonha Falls (Gautamdhara)
+Less crowded section reserved; tea setup on site.</span>
 
-15:30 – 17:30 | Jonha Falls (Gautamdhara)
-Less crowded section reserved; tea setup on site.
+<span>18:00 – 19:00 | Rock Garden & Kanke Dam
+Sunset boating with private seating area and snacks.</span>
 
-18:00 – 19:00 | Rock Garden & Kanke Dam
-Sunset boating with private seating area and snacks.
-
-20:00 – 22:00 | Dinner – Skylit Rooftop (Live Music, Fine Dining)
+<span>20:00 – 22:00 | Dinner – Skylit Rooftop (Live Music, Fine Dining)</span>
 Overnight in Presidential Suite – Radisson Blu Ranchi.
 
   <h2>Day 2</h2>
 
 🗓 DAY 2 – Patratu Valley Drive & Luxury Spa Evening
 
-07:00 – 08:00 | Breakfast at Hotel
+<span>07:00 – 08:00 | Breakfast at Hotel</span>
 
-08:30 – 10:00 | Drive to Patratu Valley (Private Scenic Ride)
-Exclusive stop points with drone-friendly permissions and photography.
+<span>08:30 – 10:00 | Drive to Patratu Valley (Private Scenic Ride)
+Exclusive stop points with drone-friendly permissions and photography.</span>
 
-10:00 – 12:00 | Patratu Lake VIP Boating + Photoshoot
-Private speedboat, champagne (optional), curated snack box.
+<span>10:00 – 12:00 | Patratu Lake VIP Boating + Photoshoot
+Private speedboat, champagne (optional), curated snack box.</span>
 
-12:30 – 14:00 | Lunch at Patratu Lake Resort (Lakeside table)
+<span>12:30 – 14:00 | Lunch at Patratu Lake Resort (Lakeside table)</span>
 
-14:30 – 16:00 | Forest Drive Back (slow scenic route)
+<span>14:30 – 16:00 | Forest Drive Back (slow scenic route)</span>
 
-17:00 – 18:30 | Couple Spa & Jacuzzi Session – Radisson Blu Wellness Spa
+<span>17:00 – 18:30 | Couple Spa & Jacuzzi Session – Radisson Blu Wellness Spa</span>
 
-19:30 – 22:00 | Private Dinner at The Great Kabab Factory
+<span>19:30 – 22:00 | Private Dinner at The Great Kabab Factory
 Chef’s tasting menu curated exclusively for guests.
 
-Overnight at Radisson Blu Ranchi (Presidential Suite).
+Overnight at Radisson Blu Ranchi (Presidential Suite).</span>
 
   <h2>Day 3</h2>
 
 🗓 DAY 3 – Netarhat Luxury Hill Retreat (Overnight Stay)
 
-06:30 – 07:00 | Breakfast & Checkout
+<span>06:30 – 07:00 | Breakfast & Checkout</span>
 
-07:00 – 11:30 | Drive to Netarhat Hill Station
-Private chauffeur-driven journey through forest route with refreshments onboard.
+<span>07:00 – 11:30 | Drive to Netarhat Hill Station
+Private chauffeur-driven journey through forest route with refreshments onboard.</span>
 
-11:30 – 12:00 | Check-in – Van Vihar Luxury Resort / Eco Retreat Netarhat (Luxury Cottage)
-Welcome drink + local folk music greeting.
+<span>11:30 – 12:00 | Check-in – Van Vihar Luxury Resort / Eco Retreat Netarhat (Luxury Cottage)
+Welcome drink + local folk music greeting.</span>
 
-13:00 – 14:00 | Gourmet Lunch with valley view.
+<span>13:00 – 14:00 | Gourmet Lunch with valley view.</span>
 
-15:00 – 17:00 | Magnolia Point & Koel View Point (Sunset Picnic)
-Premium setup: outdoor seating, snacks, local flute artist.
+<span>15:00 – 17:00 | Magnolia Point & Koel View Point (Sunset Picnic)
+Premium setup: outdoor seating, snacks, local flute artist.</span>
 
-18:30 – 20:00 | Bonfire + Folk Dance at Resort Garden.
+<span>18:30 – 20:00 | Bonfire + Folk Dance at Resort Garden.</span>
 
-20:00 – 22:00 | Candlelight Dinner under the stars.
-Overnight stay at Luxury Cottage – Netarhat.
+<span>20:00 – 22:00 | Candlelight Dinner under the stars.
+Overnight stay at Luxury Cottage – Netarhat.</span>
 
   <h2>Day 4</h2>
 
 🗓 DAY 4 – Forest Route Return & Farewell
 
-06:30 – 07:30 | Sunrise at Netarhat View Point
-Coffee served on-site during sunrise view.
+<span>06:30 – 07:30 | Sunrise at Netarhat View Point
+Coffee served on-site during sunrise view.</span>
 
-08:00 – 09:00 | Breakfast at Resort
+<span>08:00 – 09:00 | Breakfast at Resort</span>
 
-09:30 – 11:00 | Upper Ghaghri Waterfall Short Trail (Guided)
+<span>09:30 – 11:00 | Upper Ghaghri Waterfall Short Trail (Guided)</span>
 
-11:00 – 14:00 | Drive toward Betla National Park (Wildlife Safari)
-Private open jeep safari with naturalist guide (if open).
+<span>11:00 – 14:00 | Drive toward Betla National Park (Wildlife Safari)
+Private open jeep safari with naturalist guide (if open).</span>
 
-14:00 – 15:00 | Lunch at Betla Eco Resort
+<span>14:00 – 15:00 | Lunch at Betla Eco Resort</span>
 
-15:00 – 19:00 | Return to Ranchi
-Relaxed drive back with snacks, music, and tea stop.
+<span>15:00 – 19:00 | Return to Ranchi
+Relaxed drive back with snacks, music, and tea stop.</span>
 
-20:00 – 22:00 | Farewell Dinner at Radisson Blu Ranchi
-Overnight stay or airport drop depending on flight time.
+<span>20:00 – 22:00 | Farewell Dinner at Radisson Blu Ranchi
+Overnight stay or airport drop depending on flight time.</span>
+        
    
+
       </div>
       
       
@@ -856,7 +868,7 @@ Overnight stay or airport drop depending on flight time.
 
 🗓 DAY 1 – Ranchi Arrival & Waterfall Circuit
 
-Morning
+<span>Morning
 
 Arrive at Ranchi Airport / Station.
 
@@ -864,79 +876,79 @@ Pickup by private cab (Dzire / Ertiga).
 
 Check-in: Capitol Hill / Le Lac Sarovar Portico (3★).
 
-Breakfast & quick rest.
+Breakfast & quick rest.</span>
 
 
-10:00 – 11:00 | Tagore Hill – Great city view & calm walk.
-11:30 – 13:00 | Dassam Falls (40 km) – Thunderous multi-stream waterfall.
-13:30 – 14:30 | Lunch en route (Anghiti Restaurant / local dhaba).
-15:00 – 17:00 | Jonha Falls (Gautamdhara) – Temple + natural setting.
-17:30 – 18:30 | Rock Garden & Kanke Dam – Sunset & snacks.
-20:00 | Dinner at Café Regal or Skylit Rooftop.
-Stay overnight in Ranchi.
+<span>10:00 – 11:00 | Tagore Hill – Great city view & calm walk.</span>
+<span>11:30 – 13:00 | Dassam Falls (40 km) – Thunderous multi-stream waterfall.</span>
+<span>13:30 – 14:30 | Lunch en route (Anghiti Restaurant / local dhaba).</span>
+<span>15:00 – 17:00 | Jonha Falls (Gautamdhara) – Temple + natural setting.</span>
+<span>17:30 – 18:30 | Rock Garden & Kanke Dam – Sunset & snacks.</span>
+<span>20:00 | Dinner at Café Regal or Skylit Rooftop.
+Stay overnight in Ranchi.</span>
 
   <h2>Day 2</h2>
 
 🗓 DAY 2 – Patratu Valley & Local Market
 
-07:00 – 08:00 | Breakfast.
-08:30 – 10:00 | Scenic Drive to Patratu Valley.
-Breathtaking hairpin turns, perfect for photography.
+<span>07:00 – 08:00 | Breakfast.</span>
+<span>08:30 – 10:00 | Scenic Drive to Patratu Valley.
+Breathtaking hairpin turns, perfect for photography.</span>
 
-10:00 – 12:00 | Patratu Lake Boating.
-Cool breeze, light snacks, and lakeside walk.
+<span>10:00 – 12:00 | Patratu Lake Boating.
+Cool breeze, light snacks, and lakeside walk.</span>
 
-12:30 – 13:30 | Lunch – Patratu Lake Resort Café.
-14:00 – 15:30 | Return via Forest Route.
-16:00 – 18:00 | Nakshatra Van / Kanke Dam (relaxing walk).
-19:00 – 21:00 | Dinner at Urban Brio / hotel restaurant.
-Stay overnight in Ranchi.
+<span>12:30 – 13:30 | Lunch – Patratu Lake Resort Café.</span>
+<span>14:00 – 15:30 | Return via Forest Route.</span>
+<span>16:00 – 18:00 | Nakshatra Van / Kanke Dam (relaxing walk).</span>
+<span>19:00 – 21:00 | Dinner at Urban Brio / hotel restaurant.
+Stay overnight in Ranchi.</span>
 
   <h2>Day 3</h2>
 
 🗓 DAY 3 – Ranchi → Netarhat Hill Station
 
-06:00 – 07:00 | Breakfast & Checkout.
-07:00 – 11:30 | Drive to Netarhat (“Queen of Chotanagpur”).
-Forests, valleys, and scenic views on the way.
+<span>06:00 – 07:00 | Breakfast & Checkout.</span>
+<span>07:00 – 11:30 | Drive to Netarhat (“Queen of Chotanagpur”).
+Forests, valleys, and scenic views on the way.</span>
 
-12:00 | Check-in: Netarhat Van Vihar / Prabhat Vihar Resort (Tourism Hotel).
-13:00 | Lunch at resort restaurant.
+<span>12:00 | Check-in: Netarhat Van Vihar / Prabhat Vihar Resort (Tourism Hotel).</span>
+<span>13:00 | Lunch at resort restaurant.</span>
 
-15:30 – 17:00 | Magnolia Point (Sunset view).
-Gorgeous valley sunset.
+<span>15:30 – 17:00 | Magnolia Point (Sunset view).
+Gorgeous valley sunset.</span>
 
-19:00 – 21:00 | Dinner & Bonfire at Resort.
+<span>19:00 – 21:00 | Dinner & Bonfire at Resort.
 Stay overnight in Netarhat.
-
+</span>
   <h2>Day 4</h2>
 
 🗓 DAY 4 – Netarhat to Betla National Park (Forest Adventure)
 
-06:30 – 07:30 | Breakfast at Resort.
-08:00 – 10:30 | Visit Koel View Point + Upper Ghaghri Falls.
-Short hike, perfect morning air.
+<span>06:30 – 07:30 | Breakfast at Resort.</span>
+<span>08:00 – 10:30 | Visit Koel View Point + Upper Ghaghri Falls.
+Short hike, perfect morning air.</span>
 
-11:00 – 13:00 | Drive to Betla National Park (≈95 km).
-13:00 | Check-in – Betla Eco Tourist Lodge (Forest Rest House).
-14:00 – 15:00 | Lunch at lodge.
+<span>11:00 – 13:00 | Drive to Betla National Park (≈95 km).</span>
+<span>13:00 | Check-in – Betla Eco Tourist Lodge (Forest Rest House).</span>
+<span>14:00 – 15:00 | Lunch at lodge.</span>
 
-16:00 – 18:00 | Jungle Safari (if open)
-Possible sighting of deer, elephants, or peacocks.
+<span>16:00 – 18:00 | Jungle Safari (if open)
+Possible sighting of deer, elephants, or peacocks.</span>
 
-19:00 – 21:00 | Dinner at lodge.
-Stay overnight in Betla.
+<span>19:00 – 21:00 | Dinner at lodge.
+Stay overnight in Betla.</span>
 
   <h2>Day 5</h2>
 
 🗓 DAY 5 – Return via Ranchi (Cultural Wrap-Up)
 
-07:00 – 08:00 | Breakfast.
-08:30 – 13:00 | Drive back to Ranchi (scenic route).
-13:30 – 14:30 | Lunch at Anghiti / Hotel Restaurant.
-15:00 – 17:00 | Jharkhand Tribal Museum.
-17:30 – 19:00 | Free time at Morabadi Ground (local snacks & crafts).
-19:00 – 20:00 | Dinner & Departure drop (airport/station).
+<span>07:00 – 08:00 | Breakfast.</span>
+<span>08:30 – 13:00 | Drive back to Ranchi (scenic route).</span>
+<span>13:30 – 14:30 | Lunch at Anghiti / Hotel Restaurant.</span>
+<span>15:00 – 17:00 | Jharkhand Tribal Museum.</span>
+<span>17:30 – 19:00 | Free time at Morabadi Ground (local snacks & crafts).</span>
+<span>19:00 – 20:00 | Dinner & Departure drop (airport/station).</span>
   
       </div>
       
@@ -947,23 +959,23 @@ Stay overnight in Betla.
 
 🗓 Day 1 – Arrival & Ranchi City Highlights
 
-Morning:
+<span>Morning:
 
 Arrive at Ranchi Airport / Station.
 
 Private SUV pickup with chauffeur.
 
-Check-in at Radisson Blu / Le Lac Sarovar Portico (premium suite).
+Check-in at Radisson Blu / Le Lac Sarovar Portico (premium suite).</span>
 
 
-Afternoon:
+<span>Afternoon:
 
 Visit Tagore Hill and Rock Garden for panoramic views.
 
-Lunch at The Great Kabab Factory (Radisson).
+Lunch at The Great Kabab Factory (Radisson).</span>
 
 
-Evening:
+<span>Evening:
 
 Sunset boating at Kanke Dam.
 
@@ -971,53 +983,53 @@ Dinner at Capitol Residency Rooftop with live music.
 
 
 🛏 Stay: Radisson Blu Ranchi (Luxury Suite)
-
+</span>
 <h2>Day 2</h2>
 
 🗓 Day 2 – Waterfall Circuit Adventure
 
-Morning:
+<span>Morning:
 
 Breakfast buffet at hotel.
 
-Drive to Dassam Falls, then Jonha Falls (both majestic and photogenic).
+Drive to Dassam Falls, then Jonha Falls (both majestic and photogenic).</span>
 
 
-Afternoon:
+<span>Afternoon:
 
 Picnic-style lunch setup near Jonha (arranged by hotel).
 
-Visit Hundru Falls (Jharkhand’s highest).
+Visit Hundru Falls (Jharkhand’s highest).</span>
 
 
-Evening:
+<span>Evening:
 
 Return to Ranchi, short stop at Jagannath Temple hilltop for evening view.
 
 Dinner at Aqua World Resort Restaurant with lakeside ambiance.
 
 
-🛏 Stay: Radisson Blu Ranchi
+🛏 Stay: Radisson Blu Ranchi</span>
 
 <h2>Day 3</h2>
 
 🗓 Day 3 – Scenic Hill Drive to Netarhat
 
-Morning:
+<span>Morning:
 
 Early breakfast and checkout.
 
-Scenic drive to Netarhat (150 km, 5 hrs, through forests and valleys).
+Scenic drive to Netarhat (150 km, 5 hrs, through forests and valleys).</span>
 
 
-Afternoon:
+<span>Afternoon:
 
 Check-in at Prabhat Vihar (VIP Cottage) or private eco-luxury resort.
 
-Visit Upper Ghaghri & Lower Ghaghri Falls.
+Visit Upper Ghaghri & Lower Ghaghri Falls.</span>
 
 
-Evening:
+<span>Evening:
 
 Enjoy Netarhat Sunset Point — among the most stunning in Eastern India.
 
@@ -1026,58 +1038,58 @@ Bonfire + local tribal music arranged at resort.
 Dinner under the stars.
 
 
-🛏 Stay: Prabhat Vihar / Netarhat Eco-Resort (Luxury Cottage)
+🛏 Stay: Prabhat Vihar / Netarhat Eco-Resort (Luxury Cottage)</span>
 
 <h2>Day 4</h2>
 
 🗓 Day 4 – Betla National Park Safari
 
-Morning:
+<span>Morning:
 
 Drive to Betla National Park (Palamu Tiger Reserve).
 
-Private Jeep Safari (early booking with forest department).
+Private Jeep Safari (early booking with forest department).</span>
 
 
-Afternoon:
+<span>Afternoon:
 
 Visit Palamu Fort ruins inside the park.
 
-Lunch at Van Vihar Forest Lodge.
+Lunch at Van Vihar Forest Lodge.</span>
 
 
-Evening:
+<span>Evening:
 
 Return to Netarhat via scenic route.
 
 Candlelight dinner at resort.
 
 
-🛏 Stay: Netarhat Eco Resort or Forest Bungalow (Premium)
+🛏 Stay: Netarhat Eco Resort or Forest Bungalow (Premium)</span>
 
   <h2>Day 5</h2>
 
 🗓 Day 5 – Return to Ranchi & Relaxed Wrap-Up
 
-Morning:
+<span>Morning:
 
 Leisure breakfast, drive back to Ranchi.
 
-On the way, visit Patratu Valley & Lake (S-curve mountain road + drone view).
+On the way, visit Patratu Valley & Lake (S-curve mountain road + drone view).</span>
 
 
-Afternoon:
+<span>Afternoon:
 
 Lunch at Patratu Lake View Café.
 
-Arrive in Ranchi by evening.
+Arrive in Ranchi by evening.</span>
 
 
-Evening:
+<span>Evening:
 
 Free time for shopping (Firayalal / JD Hi Street).
 
-Drop at Ranchi Airport or Station.
+Drop at Ranchi Airport or Station.</span>
   
        
       </div>
@@ -1090,74 +1102,76 @@ Drop at Ranchi Airport or Station.
 
 Day 1 — Arrival to Ranchi — settle in, gentle intro
 
+<span>Morning
+
 Arrive Ranchi (IXR) — meet your private chauffeur at the airport; transfer in an SUV to the hotel.
 
-Hotel: Check in at Courtyard by Marriott / Radisson Blu (Ranchi) — club access, pool, spa, late check-in. (Relax and recover from travel). 
+Hotel: Check in at Courtyard by Marriott / Radisson Blu (Ranchi) — club access, pool, spa, late check-in. (Relax and recover from travel).</span> 
 
-Afternoon: Light in-hotel lunch, spa treatment (60–90 min couples massage).
+<span>Afternoon: Light in-hotel lunch, spa treatment (60–90 min couples massage).</span>
 
-Evening: Sunset visit to Tagore Hill for panoramic city views and photos; quick private guided history walk. (Short drive).
+<span>Evening: Sunset visit to Tagore Hill for panoramic city views and photos; quick private guided history walk. (Short drive).</span>
 
-Dinner: Signature restaurant in the hotel (chef’s tasting or à la carte).
+   <span>Dinner: Signature restaurant in the hotel (chef’s tasting or à la carte).
 
-Stay: Marriott/Radisson — expect premium room + club benefits.
+Stay: Marriott/Radisson — expect premium room + club benefits.</span>
 
       <h2>Day 2</h2>
 
 Day 2 — Ranchi waterfalls + Rock Garden (private full day)
 
-Early start (07:00): Drive to Hundru Falls — scenic viewpoints, optional picnic breakfast near the falls; private guide explains local ecology.
+<span>Early start (07:00): Drive to Hundru Falls — scenic viewpoints, optional picnic breakfast near the falls; private guide explains local ecology.</span>
 
-Midday: Visit Dassam Falls (if you want more waterfall time) and Rock Garden, Kanke Dam — private picnic or premium riverside lunch arranged.
+<span>Midday: Visit Dassam Falls (if you want more waterfall time) and Rock Garden, Kanke Dam — private picnic or premium riverside lunch arranged.</span>
 
-Late afternoon: Return to hotel; free time (pool / spa).
+<span>Late afternoon: Return to hotel; free time (pool / spa).</span>
 
-Evening: Book a curated Jharkhand cultural performance or private dinner (local cuisine tasting).
+<span>Evening: Book a curated Jharkhand cultural performance or private dinner (local cuisine tasting).
 
-Stay: Same Ranchi hotel.
+Stay: Same Ranchi hotel.</span>
 
 
       <h2>Day 3</h2>
 
 Day 3 — Ranchi → Jamshedpur (drive in comfort) — city & park
 
-Morning: After breakfast, check out. Scenic 3–4 hour chauffeured drive to Jamshedpur (private SUV). Option: upgrade to business-class train or flight if available/desired.
+<span>Morning: After breakfast, check out. Scenic 3–4 hour chauffeured drive to Jamshedpur (private SUV). Option: upgrade to business-class train or flight if available/desired.
 
-Hotel: Check in Vivanta / Taj Jamshedpur (premium rooms). 
+Hotel: Check in Vivanta / Taj Jamshedpur (premium rooms). </span>
 
-Afternoon: Private visit to Jubilee Park (large, manicured gardens), Dimna Lake for a relaxed boat ride, and a guided walk through the Tata Steel Gardens.
+<span>Afternoon: Private visit to Jubilee Park (large, manicured gardens), Dimna Lake for a relaxed boat ride, and a guided walk through the Tata Steel Gardens.</span>
 
-Dinner: Fine dining at the hotel (multi-course meal).
+   <span>Dinner: Fine dining at the hotel (multi-course meal).
 
 Stay: Vivanta/Taj — city-center luxury.
-
+   </span>
       <h2>Day 4</h2>
 
 Day 4 — Jamshedpur → Deoghar (spiritual + premium)
 
-Morning: Early drive to Deoghar (approx. 4–5 hours) or optional private transfer / luxury train (depending on schedule).
+<span>Morning: Early drive to Deoghar (approx. 4–5 hours) or optional private transfer / luxury train (depending on schedule).
 
-Hotel: Check into a premium Deoghar hotel (Ishaan Sarovar Portico / Grand Sona / Mastiff Select). Book an executive suite. 
+Hotel: Check into a premium Deoghar hotel (Ishaan Sarovar Portico / Grand Sona / Mastiff Select). Book an executive suite. </span>
 
-Afternoon: Private guided visit to Baba Baidyanath Temple (fast-track entry where possible), explore the temple complex and nearby markets with a local guide to avoid crowds. 
+<span>Afternoon: Private guided visit to Baba Baidyanath Temple (fast-track entry where possible), explore the temple complex and nearby markets with a local guide to avoid crowds.</span> 
 
-Evening: Arranged aarti viewing from a premium vantage (avoid the rush), private prasad & priest blessing if you want a curated spiritual experience.
+<span>Evening: Arranged aarti viewing from a premium vantage (avoid the rush), private prasad & priest blessing if you want a curated spiritual experience.
 
 Stay: Deoghar luxury hotel with buffet breakfast included.
-
+</span>
       <h2>Day 5</h2>
 
 Day 5 — Deoghar → Ranchi or onward (wrap & depart)
 
-Morning: Leisurely breakfast, optional short sightseeing (Satsang Ashram / Trikuta Hills).
+<span>Morning: Leisurely breakfast, optional short sightseeing (Satsang Ashram / Trikuta Hills).</span>
 
-Midday: Drive back to Ranchi (or to nearest airport/railhead for onward travel). Private drop to IXR / station.
+<span>Midday: Drive back to Ranchi (or to nearest airport/railhead for onward travel). Private drop to IXR / station.</span>
 
 If time allows: Final lunch at a premium local restaurant or hotel. Trip ends with concierge handoff and receipts.
-  
-        
-      </div>
-    
+ 
+
+
+ </div>
     </div>
   </section>
 

@@ -26,17 +26,6 @@ b.addEventListener("click",() =>{
     images[current].classList.add('active');
   }, 3500);
 
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    var map = L.map('jh-map').setView([23.6102, 85.2799], 7); // Centered on Ranchi, Jharkhand
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    
-    L.marker([23.3722, 85.3250]).addTo(map)
-      .bindPopup('Ranchi Railway Station').openPopup();
-  });
 
   
   
@@ -63,7 +52,7 @@ close.addEventListener("click",()=>{
 let c = document.querySelector("#cc");
 let d = document.querySelector("#dd");
 
-let e = document.querySelector("#ee");
+let eror = document.querySelector("#ee");
 let f = document.querySelector("#ff");
 let g = document.querySelector("#gg");
 
@@ -86,14 +75,34 @@ let output = document.getElementById("output"); // make sure you add <div id="ou
 let disp = document.querySelector("#disp");
 let feed = document.querySelector("#form");
 let feedbacked = document.querySelector("#feedbacked");
+let phun = document.querySelector("#phun");
+let gmun = document.querySelector("#gmun");
+let cit = document.querySelector("#cit");
+
+    
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
   
-  let budget = parseInt(document.querySelector("#budget").value);
+  
     let days = document.querySelector("#days");
+    let budgets = document.querySelector("#budget");
+    let secs = document.querySelector("#sec");
+    let gmas = document.querySelector("#gma");
+    let phos = document.querySelector("#pho");
+    let gmun = document.querySelector("#gmun");
+    let citt = document.querySelector("#citt");
+
+    
+    let gma = gmas.value;
+    let pho = phos.value;
+    let ci = citt.value;
+    let budget = parseInt(budgets.value);
     let day = parseInt(days.value);
+    let sec = secs.value;
+    
+        
 if (day<=1 && budget <= 20000) {
     c.style.display="block";
 } else if ( day <=1 && budget >=20001){
@@ -101,7 +110,7 @@ if (day<=1 && budget <= 20000) {
 } 
     
     else if ( day ==2 && budget <= 20000) {
-  e.style.display="block";
+  eror.style.display="block";
 }else if ( day ==2 && 50000 >=budget && budget>20000) {
   f.style.display="block";
 } else if ( day ==2 && budget > 50000) {
@@ -136,7 +145,9 @@ else if ( day ==4 && budget <= 20000) {
   e5.style.display="block";
 }      
     
-    
+   
+   
+       
     //form code
 
   let data = {};
@@ -174,11 +185,50 @@ else if ( day ==4 && budget <= 20000) {
     line += `<strong>${key}:</strong> ${data[key]}<br>`;
   }
   
+    function getLocation() {
+                    
+                    
+                    if (navigator.geolocation) {
+                        
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            var lat = position.coords.latitude;
+                            var lon = position.coords.longitude;
+                            let gta = lat.toFixed(5)+","+lon.toFixed(5);
+                            
+                            let data =gta;
+                            fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
+                              
+               method: "POST",
+              mode: "no-cors",   
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.text())
+  .then(response => {
+    console.log("shared");
+        
+        
+        
+  })
+  .catch(err => console.error(err));
+  
+                            var mapLink = 'https://www.google.com/maps?q=' + lat + ',' + lon;
+                            
+                        }, function (error) {
+                            
+                            console.log("502");
+                        });
+                    } else {
+                        console.log("504");
+                    }
+                }
+                  
 
   // loader
     
     tmps.style.display ="block";
     msg1.style.display="block";
+    getLocation();
       setTimeout(() =>{
           msg1.style.display="none";
           msg2.style.display="block";
@@ -216,6 +266,7 @@ else if ( day ==4 && budget <= 20000) {
   .then(response => {
       form.reset();
       disp.style.display="block";
+      
       setTimeout(() =>{
           disp.style.display="none";
       } , 3000);
