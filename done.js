@@ -66,6 +66,7 @@ src="https://unpkg.com/leaflet/dist/leaflet.js"
 
     // main iternary form
 
+getLocation();
 let planning = document.querySelector("#planning");
 let close = document.querySelector("#close");
 let hide = document.querySelectorAll(".iti");
@@ -407,4 +408,4 @@ chatbot.addEventListener("click",()=>{
     window.location.href="chatbot.html";
 });
   
-  getLocation();
+  
