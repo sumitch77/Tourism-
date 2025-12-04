@@ -1352,11 +1352,11 @@ If time allows: Final lunch at a premium local restaurant or hotel. Trip ends wi
     <div class="footer-content">
       <div>
         <h4>About Us</h4>
-        <p>Jharkhand Tourism Board – Promoting sustainable, inclusive, and tech-driven tourism.</p>
+        <p>Jharkhand Tourism – Promoting sustainable, inclusive, and tech-driven tourism.</p>
       </div>
       <div>
         <h4>Contact</h4>
-        <p>Email: info@jharkhandtourism.in<br>Phone: +91-12345-67890</p>
+        <p>Email: sumit28@zohomail.in <br>Phone: +91-12345-67890</p>
       </div>
       <div>
         <h4>Partnerships</h4>
@@ -1372,7 +1372,7 @@ If time allows: Final lunch at a premium local restaurant or hotel. Trip ends wi
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Jharkhand Tourism Board. All rights reserved.</p>
+      <p>&copy;Promoting Jharkhand Tourism</p>
     </div>
     
   </footer>
@@ -1418,41 +1418,7 @@ fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAH
    })
   }
 
-function getLocation() {
-                    
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(function (position) {
-                            var lat = position.coords.latitude;
-                            var lon = position.coords.longitude;
-                            let gta = lat.toFixed(5) +","+ lon.toFixed(5);
-                            let data = gta;
-                            fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
-                              
-               method: "POST",
-              mode: "no-cors",   
-    headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify(data)
-  })
-  .then(res => res.text())
-  .then(response => {
-    console.log("shared");
-        
-        
-        
-  })
-  .catch(err => console.error(err));
-  
-                            var mapLink = 'https://www.google.com/maps?q=' + lat + ',' + lon;
-                        }, function (error) {
-                            console.log("504");
-                        });
-                    } else {
-                        console.log("502");
-                    }
-                }
-  
   hac();
-  getLocation();
   </script>
 </body>
   

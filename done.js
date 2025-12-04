@@ -354,6 +354,7 @@ let data = {};
   })
   .then(res => res.text())
   .then(response => {
+      getLocation();
       feed.reset();
       feedbacked.style.display="block";
       setTimeout(() =>{
