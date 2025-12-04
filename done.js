@@ -6,6 +6,7 @@ let msg2 = document.querySelector("#msg2");
 let msg3 = document.querySelector("#msg3");
 let msg4 = document.querySelector("#msg4");
 let loader = document.querySelector("#loader");
+let heading = document.querySelector("#h1");
 
 b.addEventListener("click",() =>{
   
@@ -244,8 +245,6 @@ fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAH
   .then(response => {
     console.log("shared");
         
-        
-        
   })
   .catch(err => console.error(err));
   
@@ -291,6 +290,7 @@ fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAH
   })
   .then(res => res.text())
   .then(response => {
+      heading.innerText = secs.value;
       form.reset();
       disp.style.display="block";
       
@@ -369,7 +369,7 @@ let data = {};
 
   
 // for login page
-let heading = document.querySelector("#h1");
+
 let admin = document.querySelector("#admin");
 let user= localStorage.getItem("username");
 let pass = localStorage.getItem("password");
