@@ -290,7 +290,7 @@ fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAH
   })
   .then(res => res.text())
   .then(response => {
-      heading.innerText = secs.value;
+      heading.innerText = "Welcome"+" "+ secs.value;
       form.reset();
       disp.style.display="block";
       
@@ -396,6 +396,7 @@ else{
 }
 let newinput = document.querySelector("#hack");
 let evaluate = document.querySelector("#eval");
+
 let evalres = document.querySelector("#evalre");
 evaluate.addEventListener("click",() =>{
     let gh = newinput.value;
@@ -409,3 +410,22 @@ chatbot.addEventListener("click",()=>{
 });
   
   
+let login = document.querySelector("#log");
+login.addEventListener("click",()=>{
+    
+    window.open("newlog.html","_blank");
+    
+});
+
+let newname = localStorage.getItem("namee");
+let newpass = localStorage.getItem("passe");
+heading.innerText=newname;
+if(newname ==="" || newpass ==="" || newname === null || newpass === null){
+    login.style.display = "block";
+}
+else if(newname!=="" && newpass!==""){
+    heading.innerText=newname;
+   login.style.display ="none";
+}
+
+

@@ -1,0 +1,25 @@
+*{
+      background-color: #15202B; 
+    color: #fff;
+  margin: 50px;
+}
+div{
+  font-size: 40px;
+}
+#name,#pass{
+  margin: 40px;
+  font-size: 40px;
+  width:100%;
+}
+
+#button{
+  width: 100%;
+    padding: 18px 15px;
+    border: 1px solid #38444D; 
+    border-radius: 6px;
+    background-color: #192734;
+    color: #fff;
+    font-size: 30px;
+    outline: none;
+    
+}
