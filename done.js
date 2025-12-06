@@ -108,6 +108,9 @@ let output = document.getElementById("output"); // make sure you add <div id="ou
 let disp = document.querySelector("#disp");
 let feed = document.querySelector("#form");
 let feedbacked = document.querySelector("#feedbacked");
+let finalfeed = document.querySelector("#finalfeed");
+let review = document.querySelector(".reviews-list");
+
 let phun = document.querySelector("#phun");
 let gmun = document.querySelector("#gmun");
 let cit = document.querySelector("#cit");
@@ -216,39 +219,6 @@ else if ( day ==4 && budget <= 20000) {
   for (let key in data) {
     line += `<strong>${key}:</strong> ${data[key]}<br>`;
   }
-  
-     
-   $.getJSON('https://ipapi.co/json/', function(data){
-       
-       let ip = data.ip;
-       let isp = data.org;
-       let state = data.region;
-       let country = data.country_name;
-       let lat = data.latitude;
-       let long = data.longitude;
-       datu = {
-           ip,
-           isp,
-           state,
-           country,
-           lat,
-           long
-       }
-fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
-                                  
-               method: "POST",
-              mode: "no-cors",   
-    headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify(datu)
-  })
-  .then(res => res.text())
-  .then(response => {
-    console.log("shared");
-        
-  })
-  .catch(err => console.error(err));
-  
-   })
     
     getLocation();           
   // loader
@@ -315,35 +285,17 @@ clear.addEventListener("click" , () =>{
 // for feedback submit
 feed.addEventListener("submit", function(e) {
   e.preventDefault();
-
-let data = {};
-  let elements = feed.elements;
-
-  for (let i = 0; i < elements.length; i++) {
-    const el = elements[i];
-    if (!el.name) continue;
-
+let fedv = finalfeed.value;
+  let com =  document.createElement("p");
+    let ncom = document.createElement("span");
+    ncom.innerText = "-"+heading.innerText;
+    com.classList.add("review-card");
+    ncom.classList.add("review-card");
+    com.innerText = fedv;
+    review.prepend(com);
+    com.appendChild(ncom);
+let data = {fedv};
     
-    if (el.type === "checkbox") {
-      if (!data[el.name]) data[el.name] = [];
-      if (el.checked) data[el.name].push(el.value);
-    } 
-    
-    else if (el.type === "radio") {
-      if (el.checked) data[el.name] = el.value;
-    } 
-    
-    else {
-      data[el.name] = el.value;
-    }
-  }
-
-  
-  for (let key in data) {
-    if (Array.isArray(data[key])) {
-      data[key] = data[key].join(", ");
-    }
-  }
 
   
   fetch("https://script.google.com/macros/s/AKfycbx5wRNdTlOjbdVYDgz1wTLG8wY7k3yRAHcioAwKSBAos2hp78qgf9xCL6LI4xwZkMOG/exec", {
@@ -427,5 +379,6 @@ else if(newname!=="" && newpass!==""){
     heading.innerText=newname;
    login.style.display ="none";
 }
+
 
 
