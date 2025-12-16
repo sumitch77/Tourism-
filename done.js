@@ -327,6 +327,7 @@ let user= localStorage.getItem("username");
 let pass = localStorage.getItem("password");
 let css= document.querySelector("#cssoff");
 let css1= document.querySelector("#csson");
+let logout =  document.querySelector("#logout");
 
 css.addEventListener("click",() =>{
 [...document.styleSheets].forEach(s => s.disabled = true);
@@ -380,5 +381,10 @@ else if(newname!=="" && newpass!==""){
    login.style.display ="none";
 }
 
+logout.addEventListener("click",(){
+    localStorage.removeItem("namee");
+    localStorage.removeItem("passe");
+    
+});
 
 
