@@ -381,9 +381,10 @@ else if(newname!=="" && newpass!==""){
    login.style.display ="none";
 }
 
-logout.addEventListener("click",(){
+logout.addEventListener("click",()=>{
     localStorage.removeItem("namee");
     localStorage.removeItem("passe");
+    location.reload();
     
 });
 
